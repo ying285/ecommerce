@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Mynavbar from "./components/navbar/Mynavbar";
+import Subnavbar from "./components/subnavbar/Subnavbar";
+import Header from "./components/header/Header";
+import Extrapris from "./components/extrapris/Extrapris";
+import Popularvaror from "./components/popularvaror/Popularvaror";
+import Footer from "./components/footer/Footer";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="p-0 m-0">
+      <Mynavbar />
+      <Subnavbar />
+      <Header />
+      <Extrapris />
+      <Popularvaror />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
