@@ -4,7 +4,7 @@ const KundLogin = (props) => {
   return (
     <Modal show={props.loginShow} onHide={props.loginClose}>
       <Modal.Header closeButton>
-        <Modal.Title>Dina Favoriter</Modal.Title>
+        <Modal.Title>Login</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <p className="p-4">

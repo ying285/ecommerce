@@ -11,18 +11,24 @@ const Mynavbar = () => {
           <Navbar.Brand href="#" className="text-white fw-bolder fs-3">
             Din Mat
           </Navbar.Brand>
+
           <Form className="d-flex w-50 ">
             <FormControl
               type="search"
               placeholder="Search"
-              className="me-2"
+              className="me-2 d-none d-lg-block"
               aria-label="Search"
             ></FormControl>
-            <button class="btn  btn-outline-light" type="submit">
+
+            <button
+              class="btn  btn-outline-light d-none d-lg-block "
+              type="submit"
+            >
               Search
             </button>
           </Form>
           <Cart />
+
           <Navbar.Toggle
             aria-controls="offcanvasNavbar"
             className="d-lg-none bg-light"

@@ -4,7 +4,7 @@ const NyKundModal = (props) => {
   return (
     <Modal show={props.nyKundShow} onHide={props.nyKundClose}>
       <Modal.Header closeButton>
-        <Modal.Title>Dina Favoriter</Modal.Title>
+        <Modal.Title>Ny kund</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <p className="p-4">

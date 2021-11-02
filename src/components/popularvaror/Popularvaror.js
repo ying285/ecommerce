@@ -1,7 +1,5 @@
 import React from "react";
-
 import { Card, Button } from "react-bootstrap";
-
 import Popularadata from "../data/PopularaData";
 
 const Popularvaror = (props) => {
