@@ -1,29 +1,74 @@
+import FavoritMobil from "../UI/modal/FavoritMobil";
+import ShoppingCartMobil from "../UI/modal/ShoppingCartMobil";
+import React, { useState } from "react";
+
 const MobilFooter = () => {
+  const [fullscreen, setFullscreen] = useState(true);
+  const [show, setShow] = useState(false);
+
+  const handleShow = (breakpoint) => {
+    setFullscreen(breakpoint);
+    setShow(true);
+  };
+
+  const [cartFullscreen, setCartFullscreen] = useState(true);
+  const [cartShow, setCartShow] = useState(false);
+
+  const handleCartShow = (breakpoint) => {
+    setCartFullscreen(breakpoint);
+    setShow(true);
+  };
+
   return (
     <div>
       <div className="bg-lighten d-lg-none d-flex flex-row justify-content-center align-items-center py-3">
-        <div className="me-5 text-center ">
-          <i class="bi bi-heart fs-4 d-flex flex-column"></i>
-          <span style={{ fontSize: ".8rem" }}>Favoriter</span>
+        <div className="me-5 text-center d-flex flex-row align-items-center">
+          <i
+            class="bi bi-heart fs-4 me-1"
+            onClick={() => handleShow("lg-down")}
+          ></i>
+          <span style={{ fontSize: ".8rem" }}>
+            Favoriter
+            <span
+              className="bg-secondary rounded-pill badge ms-1"
+              style={{ fontSize: ".8rem" }}
+            >
+              {0}
+            </span>
+          </span>
         </div>
-        <div className="position-relative text-center">
-          <i className="bi bi-cart3 fs-3 d-flex flex-column"></i>
-          <span style={{ fontSize: ".8rem" }}>65</span>
-          <span
-            className="
+        <div className="position-relative  d-flex flex-row justify-content-center align-items-center">
+          <div>
+            <i
+              className="bi bi-cart3 fs-3 me-2"
+              onClick={() => handleCartShow("lg-down")}
+            >
+              <span
+                className="
           badge
           position-absolute
-          top-0
-          start-100
+          
+          start-75
           translate-middle
           rounded-pill
           bg-danger
           "
-          >
-            0
-          </span>
+                style={{ fontSize: ".7rem", top: ".5rem" }}
+              >
+                0
+              </span>
+            </i>
+          </div>
+
+          <div style={{ fontSize: ".8rem" }}>56.98kr</div>
         </div>
       </div>
+      <FavoritMobil fullscreen={fullscreen} show={show} setShow={setShow} />
+      <ShoppingCartMobil
+        cartFullscreen={cartFullscreen}
+        cartShow={cartShow}
+        cartSetShow={setCartShow}
+      />
     </div>
   );
 };

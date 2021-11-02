@@ -1,12 +1,24 @@
-import React, { Fragment } from "react";
-import mat3 from "../../img/mat3.jpg";
+import React, { Fragment, useState } from "react";
+
+import mat3 from "../../images/img2/mat3.jpg";
+import mat4 from "../../images/img2/mat4.jpg";
+import NyKundModal from "../UI/modal/NyKundModal";
 
 const Header = () => {
+  const [nyKundModal, setNyKundModal] = useState(false);
+
+  const nyKundOpenModal = () => {
+    setNyKundModal(true);
+  };
+
+  const nyKundCloseModal = () => {
+    setNyKundModal(false);
+  };
   return (
     <Fragment>
       <div className="m-5 row">
         <div className="col-md-6">
-          <img src={mat3} alt="foto" className="w-100" />
+          <img src={mat3} alt="foto" className="w-100 rounded" />
         </div>
 
         <div className=" mt-3 col-md-6">
@@ -16,11 +28,23 @@ const Header = () => {
             hushåll i Sverige. Tryck på knappen nedan och registera dig idag då
             får du 150kr rabatt i kassan.
           </h5>
-          <button className="btn btn-primary btn-lg mt-xl-5 mt-2">
-            Bli kunde nu{" "}
+          <button
+            className="btn btn-primary btn-lg mt-xl-5 mt-2 rounded-pill shadow position-relative"
+            onClick={() => nyKundOpenModal()}
+          >
+            Bli kunde nu
           </button>
+          {/* <div>
+            <img
+              src={mat4}
+              alt="image"
+              style={{ width: "15rem" }}
+              className="position-absolute rounded end-0 top-25 d-none d-lg-block"
+            />
+          </div> */}
         </div>
       </div>
+      <NyKundModal nyKundShow={nyKundModal} nyKundClose={nyKundCloseModal} />
     </Fragment>
   );
 };
