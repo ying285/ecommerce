@@ -13,6 +13,7 @@ import HalloweenModal from "./components/UI/modal/HalloweenModal";
 import ExtraPrisOverlayData from "./components/data/ExtraPrisOverlayData";
 import PopularaOverlayData from "./components/data/PopularaOverlayData";
 import React, { useState } from "react";
+import FavoritProvider from "./components/context/FavoritProvider";
 
 const App = (props) => {
   const [showModal, setShowModal] = useState(false);
@@ -66,37 +67,39 @@ const App = (props) => {
   };
 
   return (
-    <div className="p-0 m-0 bg-light">
-      <div className="fixed-top">
-        <Mynavbar />
+    <FavoritProvider>
+      <div className="p-0 m-0 bg-light">
+        <div className="fixed-top">
+          <Mynavbar />
 
-        <Subnavbar />
+          <Subnavbar />
+        </div>
+        <div style={{ height: "6rem" }}></div>
+        <Header />
+        <Extrapris showModal={handleShowModal} />
+        <Advertisement
+          onLasamer={fickOpenModal}
+          onLasamerHalloween={halloweenOpenModal}
+        />
+        <Popularvaror showPopularaModal={onShowPopularaModal} />
+        <Footer />
+        <MyModal
+          show={showModal}
+          data={currentExtraPris}
+          closeModal={handleCloseModal}
+        />
+        <PopularaModal
+          showPopulara={showPopularaModal}
+          dataPopulara={currentPopularaPris}
+          closePopularaModal={onClosePopularaModal}
+        />
+        <FickModal showFick={myFickModal} closeFick={fickCloseModal} />
+        <HalloweenModal
+          showHalloween={myHalloweenModal}
+          closeHalloween={halloweenCloseModal}
+        />
       </div>
-      <div style={{ height: "6rem" }}></div>
-      <Header />
-      <Extrapris showModal={handleShowModal} />
-      <Advertisement
-        onLasamer={fickOpenModal}
-        onLasamerHalloween={halloweenOpenModal}
-      />
-      <Popularvaror showPopularaModal={onShowPopularaModal} />
-      <Footer />
-      <MyModal
-        show={showModal}
-        data={currentExtraPris}
-        closeModal={handleCloseModal}
-      />
-      <PopularaModal
-        showPopulara={showPopularaModal}
-        dataPopulara={currentPopularaPris}
-        closePopularaModal={onClosePopularaModal}
-      />
-      <FickModal showFick={myFickModal} closeFick={fickCloseModal} />
-      <HalloweenModal
-        showHalloween={myHalloweenModal}
-        closeHalloween={halloweenCloseModal}
-      />
-    </div>
+    </FavoritProvider>
   );
 };
 
