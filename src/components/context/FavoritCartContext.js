@@ -1,11 +1,13 @@
-import React from "react";
+import React from 'react';
 
-const FavoritCartContext = React.createContext({
-  items: [],
+// const FavoritCartContext = React.createContext({
+//   items: [],
 
-  favoritState: false,
-  addFavoritItem: (item) => {},
-  removeFavoritItem: (id) => {},
-});
+//   favoritState: false,
+//   addFavoritItem: (item) => {},
+//   removeFavoritItem: (id) => {},
+// });
+
+const FavoritCartContext = React.createContext();
 
 export default FavoritCartContext;

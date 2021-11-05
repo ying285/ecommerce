@@ -1,11 +1,13 @@
-import { NavDropdown, Nav } from "react-bootstrap";
-import React, { useState } from "react";
-import FavoritOffcanvas from "../offcanvas/FavoritOffcanvas";
-import KundLogin from "../modal/KundLogin";
+import { NavDropdown, Nav } from 'react-bootstrap';
+import React, { useState, useContext } from 'react';
+import FavoritOffcanvas from '../offcanvas/FavoritOffcanvas';
+import KundLogin from '../modal/KundLogin';
+import FavoritCartContext from '../../context/FavoritCartContext';
 
 const NavbarDropDown = () => {
   const [show, setShow] = useState(false);
   const [loginModal, setLoginkModal] = useState(false);
+  const { favoritState } = useContext(FavoritCartContext);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -79,13 +81,13 @@ const NavbarDropDown = () => {
           class="bi bi-heart fs-5 d-flex flex-column me-1 "
           onClick={() => handleShow()}
         ></i>
-        <span style={{ fontSize: ".8rem" }}>
+        <span style={{ fontSize: '.8rem' }}>
           Favoriter
           <span
             className="bg-danger rounded-pill badge ms-1"
-            style={{ fontSize: ".8rem" }}
+            style={{ fontSize: '.8rem' }}
           >
-            {0}
+            {favoritState.items.length}
           </span>
         </span>
         <a href="#" className="text-decoration-none ms-3 me-1 fs-4 text-dark">
@@ -94,7 +96,7 @@ const NavbarDropDown = () => {
             onClick={() => kundLoginOpenModal()}
           ></i>
         </a>
-        <span style={{ fontSize: ".8rem" }}>Login</span>
+        <span style={{ fontSize: '.8rem' }}>Login</span>
       </div>
       <FavoritOffcanvas show={show} handleClose={handleClose} />
       <KundLogin loginShow={loginModal} loginClose={kundLoginCloseModal} />

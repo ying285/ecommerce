@@ -1,16 +1,11 @@
-import FavoritCartContext from "./FavoritCartContext";
-import React, { useReducer } from "react";
-import PopularaData from "../data/PopularaData";
+import FavoritCartContext from './FavoritCartContext';
+import React, { useReducer } from 'react';
+// import PopularaData from '../data/PopularaData';
+import { favoritReducer } from '../../reducers/FavoritReducer';
 
 const defaultFavoritState = {
   items: [],
-  favorit: false,
-};
-
-const favoritReducer = (state, action) => {
-  if (action.type === "HEART") {
-    return { favorit: !state.favorit, id: action.id };
-  }
+  //favorit: false,
 };
 
 const FavoritProvider = (props) => {
@@ -19,20 +14,30 @@ const FavoritProvider = (props) => {
     defaultFavoritState
   );
 
-  const addFavoritItemHandler = (item) => {};
-  const removeFavoritItemHandler = (id) => {};
-  const changeFavoritState = (id) => {
-    dispatchFavorit({ type: "HEART", id: id });
-  };
-  const favoritContext = {
-    items: [],
-    favorit: favoritState.favorit,
-    addFavoritItem: addFavoritItemHandler,
-    removeFavoritItem: removeFavoritItemHandler,
+  const isFavorite = (id) => {
+    const item = favoritState.items.find((item) => item.id === id);
+    if (item) {
+      return true;
+    }
+    return false;
   };
 
+  // const addFavoritItemHandler = (item) => {};
+  // const removeFavoritItemHandler = (id) => {};
+  // const changeFavoritState = (id) => {
+  //   dispatchFavorit({ type: "HEART", id: id });
+  // };
+  // const favoritContext = {
+  //   items: [],
+  //   favorit: favoritState.favorit,
+  //   addFavoritItem: addFavoritItemHandler,
+  //   removeFavoritItem: removeFavoritItemHandler,
+  // };
+
   return (
-    <FavoritCartContext.Provider value={{ favoritContext, changeFavoritState }}>
+    <FavoritCartContext.Provider
+      value={{ favoritState, dispatchFavorit, isFavorite }}
+    >
       {props.children}
     </FavoritCartContext.Provider>
   );
