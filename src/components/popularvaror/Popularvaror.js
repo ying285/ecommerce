@@ -5,20 +5,27 @@ import { Card, Button } from "react-bootstrap";
 import Popularadata from "../data/PopularaData";
 
 const Popularvaror = (props) => {
-  const { favoritContext, changeFavoritState } = useContext(FavoritCartContext);
+  const { dispatchFavorit, isFavorite } = useContext(FavoritCartContext);
 
-  console.log(favoritContext.favorit);
   return (
     <div className="my-5">
       <h2>Populära varor</h2>
       <div className="d-flex flex-wrap mt-5 ms-4">
         {Popularadata.map((el) => (
-          <Card style={{ width: "18rem" }} className="me-3 mt-3 shadow">
+          <Card
+            key={el.id}
+            style={{ width: "18rem" }}
+            className="me-3 mt-3 shadow"
+          >
             <i
               class={`bi ${
-                favoritContext.favorit ? "bi-heart-fill" : "bi-heart"
+                isFavorite(el.id) ? "bi-heart-fill" : "bi-heart"
               } text-end p-3 fs-3 text-secondary`}
-              onClick={() => changeFavoritState(el.id)}
+              onClick={() =>
+                isFavorite(el.id)
+                  ? dispatchFavorit({ type: "NO_HEART", id: el.id })
+                  : dispatchFavorit({ type: "HEART", id: el.id })
+              }
             />
             <Card.Img
               variant="top"

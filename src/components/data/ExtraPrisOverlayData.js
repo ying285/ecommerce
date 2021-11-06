@@ -11,7 +11,7 @@ import potatis from "../../images/img3/potatis.jpg";
 
 const ExtraPrisOverlayData = [
   {
-    id: 1,
+    id: 22,
     rabatt: "Nu 2 för 44kr",
     title: "Applejuice",
     text: "Per 100g:",
@@ -34,7 +34,7 @@ const ExtraPrisOverlayData = [
   },
 
   {
-    id: 2,
+    id: 23,
     rabatt: "Nu 2 för 10kr",
     title: "Avokado",
     text: "Per 100g:",
@@ -58,7 +58,7 @@ const ExtraPrisOverlayData = [
   },
 
   {
-    id: 3,
+    id: 24,
     rabatt: "Nu 20kr",
     title: "Blandfärs",
     text: "Per 100g:",
@@ -81,7 +81,7 @@ const ExtraPrisOverlayData = [
   },
 
   {
-    id: 4,
+    id: 25,
     rabatt: "Nu 2 för 30kr",
     title: "Chokladkaka",
     text: "Per 100g:",
@@ -104,7 +104,7 @@ const ExtraPrisOverlayData = [
   },
 
   {
-    id: 5,
+    id: 26,
     rabatt: "Nu 15kr",
     title: "Druvor",
     text: "Per 100g:",
@@ -127,7 +127,7 @@ const ExtraPrisOverlayData = [
   },
 
   {
-    id: 6,
+    id: 27,
     rabatt: "Nu 15kr",
     title: "Falukorv",
     text: "Per 100g:",
@@ -150,7 +150,7 @@ const ExtraPrisOverlayData = [
   },
 
   {
-    id: 7,
+    id: 28,
     rabatt: "Nu 10kr",
     title: "Grillchips",
     text: "Per 100g:",
@@ -173,7 +173,7 @@ const ExtraPrisOverlayData = [
   },
 
   {
-    id: 8,
+    id: 29,
     rabatt: "Nu 15kr",
     title: "Hallo",
     text: "Per 100g:",
@@ -196,7 +196,7 @@ const ExtraPrisOverlayData = [
   },
 
   {
-    id: 9,
+    id: 30,
     rabatt: "Nu 4 för 20kr",
     title: "Kexchoklad",
     text: "Per 100g:",
@@ -218,7 +218,7 @@ const ExtraPrisOverlayData = [
     Ursprung: "Sverige",
   },
   {
-    id: 10,
+    id: 31,
     rabatt: "Nu 10kr",
     title: "Potais",
     text: "Per 100g:",

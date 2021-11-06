@@ -2,6 +2,7 @@ import { NavDropdown, Nav } from "react-bootstrap";
 import React, { useState } from "react";
 import FavoritOffcanvas from "../offcanvas/FavoritOffcanvas";
 import KundLogin from "../modal/KundLogin";
+import FavoritAmount from "../amount/FavoritAmount";
 
 const NavbarDropDown = () => {
   const [show, setShow] = useState(false);
@@ -75,19 +76,20 @@ const NavbarDropDown = () => {
         </NavDropdown.Item>
       </NavDropdown>
       <div className="me-5 text-center position-absolute top-25 end-0 d-flex align-items-center mt-2">
-        <i
+        {/* <i
           class="bi bi-heart fs-5 d-flex flex-column me-1 "
           onClick={() => handleShow()}
         ></i>
         <span style={{ fontSize: ".8rem" }}>
-          Favoriter
-          <span
+          Favoriter */}
+        <FavoritAmount publicHandleShow={handleShow} />
+        {/* <span
             className="bg-danger rounded-pill badge ms-1"
             style={{ fontSize: ".8rem" }}
           >
-            {0}
-          </span>
-        </span>
+            {favoritState.items.length}
+          </span> */}
+
         <a href="#" className="text-decoration-none ms-3 me-1 fs-4 text-dark">
           <i
             class="bi bi-box-arrow-in-right"

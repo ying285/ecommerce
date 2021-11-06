@@ -11,7 +11,7 @@ import potatis from "../../images/img3/potatis.jpg";
 
 const ExtraPrisData = [
   {
-    id: 1,
+    id: 22,
     rabatt: "Nu 2 för 44kr",
     title: "Applejuice",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
@@ -20,7 +20,7 @@ const ExtraPrisData = [
   },
 
   {
-    id: 2,
+    id: 23,
     rabatt: "Nu 2 för 10kr",
     title: "Avokado",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
@@ -29,7 +29,7 @@ const ExtraPrisData = [
   },
 
   {
-    id: 3,
+    id: 24,
     rabatt: "Nu 20kr",
     title: "Blandfärs",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
@@ -38,7 +38,7 @@ const ExtraPrisData = [
   },
 
   {
-    id: 4,
+    id: 25,
     rabatt: "Nu 2 för 30kr",
     title: "Chokladkaka",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
@@ -47,7 +47,7 @@ const ExtraPrisData = [
   },
 
   {
-    id: 5,
+    id: 26,
     rabatt: "Nu 15kr",
     title: "Druvor",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
@@ -56,7 +56,7 @@ const ExtraPrisData = [
   },
 
   {
-    id: 6,
+    id: 27,
     rabatt: "Nu 15kr",
     title: "Falukorv",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
@@ -65,7 +65,7 @@ const ExtraPrisData = [
   },
 
   {
-    id: 7,
+    id: 28,
     rabatt: "Nu 10kr",
     title: "Grillchips",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
@@ -74,7 +74,7 @@ const ExtraPrisData = [
   },
 
   {
-    id: 8,
+    id: 29,
     rabatt: "Nu 15kr",
     title: "Hallo",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
@@ -83,7 +83,7 @@ const ExtraPrisData = [
   },
 
   {
-    id: 9,
+    id: 30,
     rabatt: "Nu 4 för 20kr",
     title: "Kexchoklad",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
@@ -91,7 +91,7 @@ const ExtraPrisData = [
     img: kexchoklad,
   },
   {
-    id: 10,
+    id: 31,
     rabatt: "Nu 10kr",
     title: "Potais",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",

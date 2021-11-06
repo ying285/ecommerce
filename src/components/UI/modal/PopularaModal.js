@@ -1,6 +1,9 @@
 import { Button, Modal } from "react-bootstrap";
+import React, { useContext } from "react";
+import FavoritCartContext from "../../context/FavoritCartContext";
 
 const PopularModal = (props) => {
+  const { dispatchFavorit, isFavorite } = useContext(FavoritCartContext);
   return (
     <>
       <Modal
@@ -22,8 +25,21 @@ const PopularModal = (props) => {
               {props.dataPopulara.pris}
             </p>
             <i
-              class="bi bi-heart text-end fs-3 p-3 text-secondary position-absolute  end-0"
+              class={`bi ${
+                isFavorite(props.dataPopulara.id) ? "bi-heart-fill" : "bi-heart"
+              }  text-end fs-3 p-3 text-secondary position-absolute  end-0`}
               style={{ top: "-1rem" }}
+              onClick={() =>
+                isFavorite(props.dataPopulara.id)
+                  ? dispatchFavorit({
+                      type: "NO_HEART_MODAL",
+                      id: props.dataPopulara.id,
+                    })
+                  : dispatchFavorit({
+                      type: "HEART_MODAL",
+                      id: props.dataPopulara.id,
+                    })
+              }
             />
           </div>
           <div className="d-flex justify-content-between mt-5">

@@ -6,7 +6,7 @@ import Extrapris from "./components/extrapris/Extrapris";
 import Popularvaror from "./components/popularvaror/Popularvaror";
 import Footer from "./components/footer/Footer";
 import Advertisement from "./components/advertisement/Advertisement";
-import MyModal from "./components/UI/modal/MyModal";
+import ExtraPrisModal from "./components/UI/modal/ExtraPrisModal";
 import PopularaModal from "./components/UI/modal/PopularaModal";
 import FickModal from "./components/UI/modal/FickModal";
 import HalloweenModal from "./components/UI/modal/HalloweenModal";
@@ -83,7 +83,7 @@ const App = (props) => {
         />
         <Popularvaror showPopularaModal={onShowPopularaModal} />
         <Footer />
-        <MyModal
+        <ExtraPrisModal
           show={showModal}
           data={currentExtraPris}
           closeModal={handleCloseModal}

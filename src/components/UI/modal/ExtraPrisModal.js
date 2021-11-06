@@ -1,11 +1,14 @@
 import { Button, Modal } from "react-bootstrap";
+import React, { useContext } from "react";
+import FavoritCartContext from "../../context/FavoritCartContext";
 
-const MyModal = (props) => {
+const ExtraPrisModal = (props) => {
+  const { dispatchFavorit, isFavorite } = useContext(FavoritCartContext);
+
   return (
     <>
       <Modal show={props.show} onHide={props.closeModal} animation={false}>
         <Modal.Header closeButton className="fs-4 fw-bolder">
-          {" "}
           {props.data.title}
         </Modal.Header>
         <Modal.Body>
@@ -15,8 +18,22 @@ const MyModal = (props) => {
               {props.data.rabatt}
             </p>
             <i
-              class="bi bi-heart text-end fs-3 p-3 text-secondary position-absolute  end-0"
+              class={`bi ${
+                isFavorite(props.data.id) ? "bi-heart-fill" : "bi-heart"
+              } 
+              } text-end fs-3 p-3 text-secondary position-absolute end-0`}
               style={{ top: "-1rem" }}
+              onClick={() =>
+                isFavorite(props.data.id)
+                  ? dispatchFavorit({
+                      type: "NO_HEART_EXTRA_MODAL",
+                      id: props.data.id,
+                    })
+                  : dispatchFavorit({
+                      type: "HEART_EXTRA_MODAL",
+                      id: props.data.id,
+                    })
+              }
             />
           </div>
           <div className="d-flex justify-content-between mt-5">
@@ -59,4 +76,4 @@ const MyModal = (props) => {
   );
 };
 
-export default MyModal;
+export default ExtraPrisModal;
