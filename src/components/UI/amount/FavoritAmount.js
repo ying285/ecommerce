@@ -8,7 +8,7 @@ const FavoritAmount = (props) => {
       <i
         class={`bi ${
           favoritState.items.length > 0 ? "bi-heart-fill" : "bi-heart"
-        }  fs-4 me-1`}
+        }  fs-4 me-1 text-success`}
         onClick={() => props.publicHandleShow()}
       ></i>
       <span style={{ fontSize: ".8rem" }}>Favoriter</span>

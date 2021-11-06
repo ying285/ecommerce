@@ -20,7 +20,7 @@ const Popularvaror = (props) => {
             <i
               class={`bi ${
                 isFavorite(el.id) ? "bi-heart-fill" : "bi-heart"
-              } text-end p-3 fs-3 text-secondary`}
+              } text-end p-3 fs-3 text-success`}
               onClick={() =>
                 isFavorite(el.id)
                   ? dispatchFavorit({ type: "NO_HEART", id: el.id })

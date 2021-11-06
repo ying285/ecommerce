@@ -27,7 +27,7 @@ const PopularModal = (props) => {
             <i
               class={`bi ${
                 isFavorite(props.dataPopulara.id) ? "bi-heart-fill" : "bi-heart"
-              }  text-end fs-3 p-3 text-secondary position-absolute  end-0`}
+              }  text-end fs-3 p-3 text-success position-absolute  end-0`}
               style={{ top: "-1rem" }}
               onClick={() =>
                 isFavorite(props.dataPopulara.id)
