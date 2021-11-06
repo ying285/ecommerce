@@ -1,4 +1,3 @@
-import FavoritMobil from "../UI/modal/FavoritMobil";
 import ShoppingCartMobil from "../UI/modal/ShoppingCartMobil";
 import SearchMobilModal from "../UI/modal/SearchMobilModal";
 import React, { useState } from "react";
