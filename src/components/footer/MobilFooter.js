@@ -3,6 +3,8 @@ import SearchMobilModal from "../UI/modal/SearchMobilModal";
 import React, { useState } from "react";
 import FavoritAmount from "../UI/amount/FavoritAmount";
 import FavoritOffcanvas from "../UI/offcanvas/FavoritOffcanvas";
+import Login from "../UI/login/Login";
+import VarorAmount from "../UI/amount/VarorAmount";
 
 const MobilFooter = () => {
   const [show, setShow] = useState(false);
@@ -14,7 +16,7 @@ const MobilFooter = () => {
   const [cartShow, setCartShow] = useState(false);
 
   const handleCartShow = () => {
-    setShow(true);
+    setCartShow(true);
   };
 
   const searchModalClose = () => setSearchModal(false);
@@ -22,6 +24,7 @@ const MobilFooter = () => {
   return (
     <div>
       <div className="bg-lighten d-lg-none d-flex flex-row justify-content-center align-items-center py-3">
+        <Login />
         <div className="me-3 d-flex align-items-center ">
           <i
             class="bi bi-search fs-2 me-1"
@@ -29,17 +32,8 @@ const MobilFooter = () => {
           ></i>
           <span style={{ fontSize: ".8rem" }}>Search</span>
         </div>
-        <div className="me-3 text-center ">
-          {/* <i class="bi bi-heart fs-4 me-1" onClick={() => handleShow()}></i>
-          <span style={{ fontSize: ".8rem" }}>
-            Favoriter */}
+        <div className="me-3 ">
           <FavoritAmount publicHandleShow={handleShow} />
-          {/* <span
-              className="bg-secondary rounded-pill badge ms-1"
-              style={{ fontSize: ".8rem" }}
-            >
-              {0}
-            </span> */}
         </div>
         <div className="position-relative  d-flex flex-row justify-content-center align-items-center">
           <div>
@@ -59,7 +53,7 @@ const MobilFooter = () => {
           "
                 style={{ fontSize: ".7rem", top: ".5rem" }}
               >
-                0
+                <VarorAmount />
               </span>
             </i>
           </div>

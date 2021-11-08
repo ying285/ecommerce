@@ -1,14 +1,16 @@
 import { Offcanvas } from "react-bootstrap";
-import Items from "../items/Items";
+import FavoritItems from "../items/FavoritItems";
 
 const FavoritOffcanvas = (props) => {
   return (
     <Offcanvas placement="end" show={props.show} onHide={props.handleClose}>
       <Offcanvas.Header closeButton>
-        <Offcanvas.Title>Dina favoriter</Offcanvas.Title>
+        <Offcanvas.Title className="fw-bolder fs-3">
+          Dina favoriter varor
+        </Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
-        <Items />
+        <FavoritItems />
       </Offcanvas.Body>
     </Offcanvas>
   );

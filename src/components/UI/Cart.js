@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import ShoppingCartOffcanvas from "./offcanvas/ShoppingCartOffcanvas";
+import ShoppingCartMobil from "../UI/modal/ShoppingCartMobil";
+import VarorAmount from "./amount/VarorAmount";
 
 const Cart = () => {
-  const [show, setShow] = useState(false);
+  const [cartShow, setCartShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleCartShow = () => {
+    setCartShow(true);
+  };
 
   return (
     <>
@@ -14,7 +16,7 @@ const Cart = () => {
         <Button
           className="d-flex justify-content-center rounded-pill 	d-none d-lg-block btn-danger"
           variant="primary"
-          onClick={handleShow}
+          onClick={() => handleCartShow()}
           style={{ width: "9rem" }}
         >
           <i class="bi bi-cart3 me-2"></i>
@@ -23,8 +25,6 @@ const Cart = () => {
             className="
           badge
           position-absolute
-          
-         
           translate-middle
           rounded-pill
           bg-secondary
@@ -33,10 +33,10 @@ const Cart = () => {
           "
             style={{ top: ".2rem", right: "-1.2rem" }}
           >
-            0
+            <VarorAmount />
           </span>
         </Button>
-        <ShoppingCartOffcanvas show={show} handleClose={handleClose} />
+        <ShoppingCartMobil cartShow={cartShow} cartSetShow={setCartShow} />
       </div>
     </>
   );

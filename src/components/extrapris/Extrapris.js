@@ -5,6 +5,7 @@ import ExtraPrisData from "../data/ExtraPrisData";
 import { Card, Button } from "react-bootstrap";
 import React, { useContext } from "react";
 import FavoritCartContext from "../context/FavoritCartContext";
+import InputForm from "../UI/inputForm/InputForm";
 
 const Extrapris = (props) => {
   const { dispatchFavorit, isFavorite } = useContext(FavoritCartContext);
@@ -65,7 +66,7 @@ const Extrapris = (props) => {
                   <Card.Title>{el.title}</Card.Title>
                   <Card.Text>{el.text}</Card.Text>
                   <Card.Text>{el.pris}</Card.Text>
-                  <Button variant="danger">Lägga till</Button>
+                  <InputForm />
                 </Card.Body>
               </Card>
             </SwiperSlide>

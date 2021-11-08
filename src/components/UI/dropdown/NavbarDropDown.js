@@ -3,21 +3,13 @@ import React, { useState } from "react";
 import FavoritOffcanvas from "../offcanvas/FavoritOffcanvas";
 import KundLogin from "../modal/KundLogin";
 import FavoritAmount from "../amount/FavoritAmount";
+import Login from "../login/Login";
 
 const NavbarDropDown = () => {
   const [show, setShow] = useState(false);
-  const [loginModal, setLoginkModal] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-  const kundLoginOpenModal = () => {
-    setLoginkModal(true);
-  };
-
-  const kundLoginCloseModal = () => {
-    setLoginkModal(false);
-  };
 
   return (
     <Nav className="me-auto postition-relative">
@@ -89,17 +81,16 @@ const NavbarDropDown = () => {
           >
             {favoritState.items.length}
           </span> */}
-
-        <a href="#" className="text-decoration-none ms-3 me-1 fs-4 text-dark">
+        <Login />
+        {/* <a href="#" className="text-decoration-none ms-3 me-1 fs-4 text-dark">
           <i
             class="bi bi-box-arrow-in-right"
             onClick={() => kundLoginOpenModal()}
           ></i>
         </a>
-        <span style={{ fontSize: ".8rem" }}>Login</span>
+        <span style={{ fontSize: ".8rem" }}>Login</span> */}
       </div>
       <FavoritOffcanvas show={show} handleClose={handleClose} />
-      <KundLogin loginShow={loginModal} loginClose={kundLoginCloseModal} />
     </Nav>
   );
 };

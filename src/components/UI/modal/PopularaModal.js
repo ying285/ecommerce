@@ -1,5 +1,6 @@
-import { Button, Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import React, { useContext } from "react";
+import InputForm from "../inputForm/InputForm";
 import FavoritCartContext from "../../context/FavoritCartContext";
 
 const PopularModal = (props) => {
@@ -70,12 +71,7 @@ const PopularModal = (props) => {
         </Modal.Body>
 
         <Modal.Footer>
-          <Button variant="primary" onClick={props.closePopularaModal}>
-            Stänga
-          </Button>
-          <Button variant="danger" onClick={props.closePopularaModal}>
-            Lägga till
-          </Button>
+          <InputForm />
         </Modal.Footer>
       </Modal>
     </>

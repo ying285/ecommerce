@@ -7,7 +7,7 @@ const Mynavbar = () => {
   return (
     <Fragment>
       <Navbar bg="dark" expand={false} className="p-3">
-        <Container fluid>
+        <Container fluid style={{ minWidth: "361px" }}>
           <Navbar.Brand href="#" className="text-white fw-bolder fs-3">
             Din Mat
           </Navbar.Brand>

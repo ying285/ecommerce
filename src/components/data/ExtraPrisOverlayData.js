@@ -13,6 +13,7 @@ const ExtraPrisOverlayData = [
   {
     id: 22,
     rabatt: "Nu 2 för 44kr",
+    rabattItem: "2 för 44kr",
     title: "Applejuice",
     text: "Per 100g:",
     ing_1: "Energi 2118 kJ/515 kcal",
@@ -36,6 +37,7 @@ const ExtraPrisOverlayData = [
   {
     id: 23,
     rabatt: "Nu 2 för 10kr",
+    rabattItem: "2 för 10kr",
     title: "Avokado",
     text: "Per 100g:",
     ing_1: "Energi 2118 kJ/515 kcal",
@@ -60,6 +62,7 @@ const ExtraPrisOverlayData = [
   {
     id: 24,
     rabatt: "Nu 20kr",
+    rabattItem: "20kr",
     title: "Blandfärs",
     text: "Per 100g:",
     ing_1: "Energi 2118 kJ/515 kcal",
@@ -83,6 +86,7 @@ const ExtraPrisOverlayData = [
   {
     id: 25,
     rabatt: "Nu 2 för 30kr",
+    rabattItem: "2 för 30kr",
     title: "Chokladkaka",
     text: "Per 100g:",
     ing_1: "Energi 2118 kJ/515 kcal",
@@ -106,6 +110,7 @@ const ExtraPrisOverlayData = [
   {
     id: 26,
     rabatt: "Nu 15kr",
+    rabattItem: "15kr",
     title: "Druvor",
     text: "Per 100g:",
     ing_1: "Energi 2118 kJ/515 kcal",
@@ -129,6 +134,7 @@ const ExtraPrisOverlayData = [
   {
     id: 27,
     rabatt: "Nu 15kr",
+    rabattItem: "15kr",
     title: "Falukorv",
     text: "Per 100g:",
     ing_1: "Energi 2118 kJ/515 kcal",
@@ -152,6 +158,7 @@ const ExtraPrisOverlayData = [
   {
     id: 28,
     rabatt: "Nu 10kr",
+    rabattItem: "10kr",
     title: "Grillchips",
     text: "Per 100g:",
     ing_1: "Energi 2118 kJ/515 kcal",
@@ -175,6 +182,7 @@ const ExtraPrisOverlayData = [
   {
     id: 29,
     rabatt: "Nu 15kr",
+    rabattItem: "15kr",
     title: "Hallo",
     text: "Per 100g:",
     ing_1: "Energi 2118 kJ/515 kcal",
@@ -198,6 +206,7 @@ const ExtraPrisOverlayData = [
   {
     id: 30,
     rabatt: "Nu 4 för 20kr",
+    rabattItem: "4 för 20kr",
     title: "Kexchoklad",
     text: "Per 100g:",
     ing_1: "Energi 2118 kJ/515 kcal",
@@ -220,6 +229,7 @@ const ExtraPrisOverlayData = [
   {
     id: 31,
     rabatt: "Nu 10kr",
+    rabattItem: "10kr",
     title: "Potais",
     text: "Per 100g:",
     ing_1: "Energi 2118 kJ/515 kcal",

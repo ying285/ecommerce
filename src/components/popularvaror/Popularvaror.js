@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import FavoritCartContext from "../context/FavoritCartContext";
-
-import { Card, Button } from "react-bootstrap";
+import InputForm from "../UI/inputForm/InputForm";
+import { Card } from "react-bootstrap";
 import Popularadata from "../data/PopularaData";
 
 const Popularvaror = (props) => {
@@ -38,7 +38,7 @@ const Popularvaror = (props) => {
               <Card.Title>{el.title}</Card.Title>
               <Card.Text>{el.text}</Card.Text>
               <Card.Text>{el.pris}</Card.Text>
-              <Button variant="danger">Lägg till</Button>
+              <InputForm />
             </Card.Body>
           </Card>
         ))}

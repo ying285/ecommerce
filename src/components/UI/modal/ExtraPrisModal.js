@@ -1,4 +1,5 @@
 import { Button, Modal } from "react-bootstrap";
+import InputForm from "../inputForm/InputForm";
 import React, { useContext } from "react";
 import FavoritCartContext from "../../context/FavoritCartContext";
 
@@ -64,12 +65,7 @@ const ExtraPrisModal = (props) => {
         </Modal.Body>
 
         <Modal.Footer>
-          <Button variant="primary" onClick={props.closeModal}>
-            Stänga
-          </Button>
-          <Button variant="danger" onClick={props.closeModal}>
-            Lägga till
-          </Button>
+          <InputForm />
         </Modal.Footer>
       </Modal>
     </>

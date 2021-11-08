@@ -13,6 +13,7 @@ const ExtraPrisData = [
   {
     id: 22,
     rabatt: "Nu 2 för 44kr",
+    rabattItem: "2 för 44kr",
     title: "Applejuice",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "26kr",
@@ -22,6 +23,7 @@ const ExtraPrisData = [
   {
     id: 23,
     rabatt: "Nu 2 för 10kr",
+    rabattItem: "2 för 10kr",
     title: "Avokado",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "15kr",
@@ -31,6 +33,7 @@ const ExtraPrisData = [
   {
     id: 24,
     rabatt: "Nu 20kr",
+    rabattItem: "20 kr",
     title: "Blandfärs",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
@@ -40,6 +43,7 @@ const ExtraPrisData = [
   {
     id: 25,
     rabatt: "Nu 2 för 30kr",
+    rabattItem: "2 för 30kr",
     title: "Chokladkaka",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "28kr",
@@ -49,6 +53,7 @@ const ExtraPrisData = [
   {
     id: 26,
     rabatt: "Nu 15kr",
+    rabattItem: "15 kr",
     title: "Druvor",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "28kr",
@@ -58,6 +63,7 @@ const ExtraPrisData = [
   {
     id: 27,
     rabatt: "Nu 15kr",
+    rabattItem: "15kr",
     title: "Falukorv",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "28kr",
@@ -67,6 +73,7 @@ const ExtraPrisData = [
   {
     id: 28,
     rabatt: "Nu 10kr",
+    rabattItem: "10kr",
     title: "Grillchips",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "19kr",
@@ -76,6 +83,7 @@ const ExtraPrisData = [
   {
     id: 29,
     rabatt: "Nu 15kr",
+    rabattItem: "15kr",
     title: "Hallo",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "35kr",
@@ -85,6 +93,7 @@ const ExtraPrisData = [
   {
     id: 30,
     rabatt: "Nu 4 för 20kr",
+    rabattItem: "4 för 20kr",
     title: "Kexchoklad",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "10kr",
@@ -93,6 +102,7 @@ const ExtraPrisData = [
   {
     id: 31,
     rabatt: "Nu 10kr",
+    rabattItem: "10kr",
     title: "Potais",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "18kr",

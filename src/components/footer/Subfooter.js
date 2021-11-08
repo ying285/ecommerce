@@ -1,7 +1,7 @@
 const Subfooter = () => {
   return (
     <div
-      className=" d-flex justify-content-evenly align-items-start p-5"
+      className=" d-sm-flex justify-content-evenly align-items-start p-5"
       style={{ minHeight: "20rem", backgroundColor: "#e2eeee" }}
     >
       <div>
