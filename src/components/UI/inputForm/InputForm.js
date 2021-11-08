@@ -4,7 +4,8 @@ import { useContext } from "react";
 import VarorCartContext from "../../context/VarorCartContext";
 
 const InputForm = (props) => {
-  const { addVarorItemHandler } = useContext(VarorCartContext);
+  // const { addVarorItemHandler } = useContext(VarorCartContext);
+  const { dispatchVaror } = useContext(VarorCartContext);
   const amountInputRef = useRef();
 
   const submitHandler = (e) => {
@@ -15,11 +16,15 @@ const InputForm = (props) => {
     if (
       enteredAmount.trim().length === 0 ||
       enteredAmountNumber < 1 ||
-      enteredAmountNumber > 5
+      enteredAmountNumber > 10
     ) {
       return;
     }
-    addVarorItemHandler(enteredAmountNumber);
+    dispatchVaror({
+      type: "ADD",
+      productId: props.productId,
+      amount: enteredAmountNumber,
+    });
   };
 
   return (

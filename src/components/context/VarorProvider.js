@@ -1,19 +1,25 @@
 import VarorCartContext from "./VarorCartContext";
 import React, { useReducer } from "react";
-import ExtraPrisData from "../data/ExtraPrisData";
+import Popularadata from "../data/PopularaData";
 
 const defaultVarorState = {
   items: [],
-  amount: 0,
+  totalAmount: 0,
 };
 
 const varorReducer = (state, action) => {
   if (action.type === "ADD") {
-    const updatedItems = state.items.concat(action.item);
-    const updatedAmount = state.amount + action.item.price * action.item.amount;
+    let cartItem = state.items.find((item) => item.id === action.productId);
+    if (cartItem) {
+      cartItem.amount = action.amount;
+    } else {
+      cartItem = Popularadata.find((item) => item.id === action.productId);
+    }
+    const updatedItems = state.items.concat(cartItem);
+    const updatedAmount = state.totalAmount + cartItem.pris * cartItem.amount;
     return {
       items: updatedItems,
-      amount: updatedAmount,
+      totalAmount: updatedAmount,
     };
   }
 
@@ -26,8 +32,8 @@ const VarorProvider = (props) => {
     defaultVarorState
   );
 
-  const addVarorItemHandler = (amount) => {
-    dispatchVaror({ type: "ADD", item: amount });
+  const addVarorItemHandler = (productId, amount) => {
+    dispatchVaror({ type: "ADD", productId, amount });
   };
 
   const removeVarorItemHandler = (id) => {
@@ -36,9 +42,12 @@ const VarorProvider = (props) => {
 
   return (
     <VarorCartContext.Provider
-      value={
-        (varorState, dispatchVaror, addVarorItemHandler, removeVarorItemHandler)
-      }
+      value={{
+        varorState,
+        dispatchVaror,
+        addVarorItemHandler,
+        removeVarorItemHandler,
+      }}
     >
       {props.children}
     </VarorCartContext.Provider>

@@ -5,7 +5,7 @@ import { useContext } from "react";
 import VarorCartContext from "../../context/VarorCartContext";
 
 const VarorItems = (props) => {
-  const { addVarorItemHandler } = useContext(VarorCartContext);
+  const { varorState } = useContext(VarorCartContext);
 
   const renderTooltip = (props) => (
     <Tooltip id="button-tooltip" {...props}>
@@ -15,7 +15,7 @@ const VarorItems = (props) => {
 
   const varorItem = (
     <ul className="list-unstyled">
-      {Popularadata.map((el) => (
+      {varorState.items.map((el) => (
         <li className="  border-bottom p-2">
           <div className="d-flex justify-content-between">
             <div className="d-flex align-items-center">
@@ -26,7 +26,7 @@ const VarorItems = (props) => {
               </div>
             </div>
 
-            <InputForm />
+            <InputForm productId={el.id} />
           </div>
         </li>
       ))}
