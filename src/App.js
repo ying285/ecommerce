@@ -12,12 +12,13 @@ import FickModal from "./components/UI/modal/FickModal";
 import HalloweenModal from "./components/UI/modal/HalloweenModal";
 import ExtraPrisOverlayData from "./components/data/ExtraPrisOverlayData";
 import PopularaOverlayData from "./components/data/PopularaOverlayData";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import FavoritProvider from "./components/context/FavoritProvider";
 import VarorProvider from "./components/context/VarorProvider";
 import SearchProvider from "./components/context/SearchProvider";
 import SearchModal from "./components/UI/modal/SearchModal";
-import SearchContext from "./components/context/SearchContext";
+import socialMediaAuth from "./components/UI/login/auth";
+import "./components/UI/login/firebase-config";
 
 const App = (props) => {
   const [showModal, setShowModal] = useState(false);
@@ -26,6 +27,12 @@ const App = (props) => {
   const [currentPopularaPris, setCurrentPopularaPris] = useState({});
   const [myFickModal, setFickModal] = useState(false);
   const [myHalloweenModal, setMyHalloweenModal] = useState(false);
+
+  // firebase
+  const handleOnClick = async (provider) => {
+    const res = await socialMediaAuth(provider);
+    console.log(res);
+  };
 
   //modal extra pris varor
   const handleShowModal = (dataId) => {
@@ -78,10 +85,11 @@ const App = (props) => {
             <div className="fixed-top">
               <Mynavbar />
 
-              <Subnavbar />
+              <Subnavbar loginHandler={handleOnClick} />
             </div>
             <div style={{ height: "6rem" }}></div>
             <Header />
+
             <Extrapris showModal={handleShowModal} />
             <Advertisement
               onLasamer={fickOpenModal}
@@ -104,7 +112,7 @@ const App = (props) => {
               showHalloween={myHalloweenModal}
               closeHalloween={halloweenCloseModal}
             />
-            {/* <SearchModal /> */}
+            <SearchModal />
           </div>
         </FavoritProvider>
       </VarorProvider>

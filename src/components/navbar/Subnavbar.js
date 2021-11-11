@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar, Container } from "react-bootstrap";
 import NavbarDropDown from "../UI/dropdown/NavbarDropDown";
 
-const Subnavbar = () => {
+const Subnavbar = (props) => {
   return (
     <Navbar
       expand="lg"
@@ -12,7 +12,7 @@ const Subnavbar = () => {
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <NavbarDropDown />
+          <NavbarDropDown loginHandler={props.loginHandler} />
         </Navbar.Collapse>
       </Container>
     </Navbar>

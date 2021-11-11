@@ -5,7 +5,8 @@ import { Navbar, Container, FormControl, Form } from "react-bootstrap";
 import SearchContext from "../context/SearchContext";
 
 const Mynavbar = (props) => {
-  const { searchItemHandler, searchState } = useContext(SearchContext);
+  const { searchItemHandler, searchState, dispatchSearch } =
+    useContext(SearchContext);
   console.log(searchState);
   const searchWord = useRef();
   const onSearchHandler = (e) => {
@@ -14,11 +15,13 @@ const Mynavbar = (props) => {
     const lowerCaseSearchItem = enteredSearchWord.trim().toLowerCase();
     const captialSearchItem =
       lowerCaseSearchItem[0].toUpperCase() + lowerCaseSearchItem.slice(1);
-
-    console.log(captialSearchItem);
-
     searchItemHandler(captialSearchItem);
   };
+
+  // dispatchSearch({
+  //   type: "SHOWMODAL",
+  //   show: true,
+  // });
   return (
     <Fragment>
       <Navbar bg="dark" expand={false} className="p-3">

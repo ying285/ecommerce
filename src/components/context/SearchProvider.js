@@ -2,26 +2,30 @@ import SearchContext from "./SearchContext";
 import React, { useReducer } from "react";
 import ExtraPrisOverlayData from "../data/ExtraPrisOverlayData";
 import PopularaOverlayData from "../data/PopularaOverlayData";
-import SearchModal from "../UI/modal/SearchModal";
 
 const allVaror = PopularaOverlayData.concat(ExtraPrisOverlayData);
 
 const defaultSearchState = {
-  item: "",
+  item: null,
+  showModal: false,
 };
 
 const searchReducer = (state, action) => {
   if (action.type === "SEARCH") {
     const item = allVaror.find((el) => el.title === action.title);
     if (item) {
-      state.item = item;
-      return state;
-    } else {
-      return;
-    }
-  }
+      // state.item = item;
+      // console.log(state.item);
 
-  return defaultSearchState;
+      // return state;ispatch
+      return { ...state, item };
+    } else {
+      return { ...state, item: null };
+    }
+  } else if (action.type === "SHOWMODAL") {
+    return { ...state, showModal: action.show };
+  }
+  return state;
 };
 
 const SearchProvider = (props) => {
@@ -30,8 +34,8 @@ const SearchProvider = (props) => {
     defaultSearchState
   );
 
-  const searchItemHandler = (title, handleShow) => {
-    dispatchSearch({ type: "SEARCH", title, handleShow });
+  const searchItemHandler = (title) => {
+    dispatchSearch({ type: "SEARCH", title });
   };
 
   return (

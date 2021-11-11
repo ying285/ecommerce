@@ -1,11 +1,10 @@
 import { NavDropdown, Nav } from "react-bootstrap";
 import React, { useState } from "react";
 import FavoritOffcanvas from "../offcanvas/FavoritOffcanvas";
-import KundLogin from "../modal/KundLogin";
 import FavoritAmount from "../amount/FavoritAmount";
 import Login from "../login/Login";
 
-const NavbarDropDown = () => {
+const NavbarDropDown = (props) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -81,7 +80,7 @@ const NavbarDropDown = () => {
           >
             {favoritState.items.length}
           </span> */}
-        <Login />
+        <Login loginHandler={props.loginHandler} />
         {/* <a href="#" className="text-decoration-none ms-3 me-1 fs-4 text-dark">
           <i
             class="bi bi-box-arrow-in-right"
