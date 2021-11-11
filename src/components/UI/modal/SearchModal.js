@@ -1,8 +1,8 @@
-import { Modal } from "react-bootstrap";
-import InputForm from "../inputForm/InputForm";
-import React, { useContext, useState, useEffect } from "react";
-import SearchContext from "../../context/SearchContext";
-import FavoritCartContext from "../../context/FavoritCartContext";
+import { Modal } from 'react-bootstrap';
+import InputForm from '../inputForm/InputForm';
+import React, { useContext, useState, useEffect } from 'react';
+import SearchContext from '../../context/SearchContext';
+import FavoritCartContext from '../../context/FavoritCartContext';
 
 const SearchModal = (props) => {
   const { searchState, dispatchSearch } = useContext(SearchContext);
@@ -13,13 +13,13 @@ const SearchModal = (props) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  useEffect(() => {
-    if (searchState.item) {
-      handleShow();
-    } else {
-      return;
-    }
-  }, [searchState.item]);
+  // useEffect(() => {
+  //   if (searchState.item) {
+  //     handleShow();
+  //   } else {
+  //     return;
+  //   }
+  // }, [searchState.item]);
 
   // dispatchSearch({
   //   type: "SEARCH",
@@ -29,7 +29,11 @@ const SearchModal = (props) => {
 
   if (searchState.item) {
     return (
-      <Modal show={show} onHide={handleClose} animation={false}>
+      <Modal
+        show={searchState.showModal}
+        onHide={() => dispatchSearch({ type: 'SHOWMODAL', show: false })}
+        animation={false}
+      >
         <Modal.Header closeButton className="fs-4 fw-bolder">
           {searchState.item.title}
         </Modal.Header>
@@ -41,19 +45,19 @@ const SearchModal = (props) => {
             </p>
             <i
               class={`bi ${
-                isFavorite(searchState.item.id) ? "bi-heart-fill" : "bi-heart"
+                isFavorite(searchState.item.id) ? 'bi-heart-fill' : 'bi-heart'
               } 
               } text-end fs-3 p-3 text-success position-absolute end-0`}
-              style={{ top: "-1rem" }}
+              style={{ top: '-1rem' }}
               onClick={() =>
                 isFavorite(searchState.item.id)
                   ? dispatchFavorit({
-                      type: "NO_HEART_EXTRA_MODAL",
-                      id: searchState.item.id,
+                      type: 'NO_HEART_EXTRA_MODAL',
+                      id: searchState.item.id
                     })
                   : dispatchFavorit({
-                      type: "HEART_EXTRA_MODAL",
-                      id: searchState.item.id,
+                      type: 'HEART_EXTRA_MODAL',
+                      id: searchState.item.id
                     })
               }
             />
@@ -63,7 +67,7 @@ const SearchModal = (props) => {
               <span className="fw-bolder">Vikt</span>: {searchState.item.weight}
             </p>
             <p>
-              <span className="fw-bolder">Ursprung</span>:{" "}
+              <span className="fw-bolder">Ursprung</span>:{' '}
               {searchState.item.Ursprung}
             </p>
           </div>
@@ -93,8 +97,19 @@ const SearchModal = (props) => {
     );
   } else {
     return (
-      <Modal show={show} onHide={handleClose} animation={false}>
-        <h5> no item found</h5>;
+      <Modal
+        show={searchState.showModal}
+        onHide={() => dispatchSearch({ type: 'SHOWMODAL', show: false })}
+        animation={false}
+      >
+        <Modal.Header closeButton className="fs-4 fw-bolder">
+          <h5>No Item Found</h5>
+        </Modal.Header>
+        <Modal.Body>
+          <div className="position-relative d-flex">
+            The item you searched for could not be found
+          </div>
+        </Modal.Body>
       </Modal>
     );
   }
