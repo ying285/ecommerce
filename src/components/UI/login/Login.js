@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import KundLogin from "../modal/KundLogin";
 
-const Login = () => {
+const Login = (props) => {
   const [loginModal, setLoginkModal] = useState(false);
 
   const kundLoginOpenModal = () => {
@@ -20,8 +20,12 @@ const Login = () => {
           onClick={() => kundLoginOpenModal()}
         ></i>
       </a>
-      <span style={{ fontSize: ".8rem" }}>Login</span>
-      <KundLogin loginShow={loginModal} loginClose={kundLoginCloseModal} />
+      <span style={{ fontSize: ".9rem" }}>Login</span>
+      <KundLogin
+        loginShow={loginModal}
+        loginClose={kundLoginCloseModal}
+        loginHandler={props.loginHandler}
+      />
     </div>
   );
 };

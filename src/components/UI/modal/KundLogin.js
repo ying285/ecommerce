@@ -1,4 +1,9 @@
 import { Button, Modal } from "react-bootstrap";
+import {
+  githubProvider,
+  facebookProvider,
+  googleProvider,
+} from "../login/authMethod";
 
 const KundLogin = (props) => {
   return (
@@ -7,10 +12,29 @@ const KundLogin = (props) => {
         <Modal.Title>Login</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <p className="p-4">
-          Den keltiska högtiden Samhain har stora likheter med vikingarnas
-          höstblot.
-        </p>
+        <div>
+          <button
+            onClick={() => {
+              props.loginHandler(facebookProvider);
+            }}
+          >
+            facebook
+          </button>
+          <button
+            onClick={() => {
+              props.loginHandler(githubProvider);
+            }}
+          >
+            github
+          </button>
+          <button
+            onClick={() => {
+              props.loginHandler(googleProvider);
+            }}
+          >
+            google
+          </button>
+        </div>
       </Modal.Body>
       <Modal.Footer>
         <Button variant="primary" onClick={props.loginClose}>

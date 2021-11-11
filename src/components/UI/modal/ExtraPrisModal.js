@@ -1,4 +1,4 @@
-import { Button, Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import InputForm from "../inputForm/InputForm";
 import React, { useContext } from "react";
 import FavoritCartContext from "../../context/FavoritCartContext";

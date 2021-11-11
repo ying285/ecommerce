@@ -1,9 +1,27 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useRef, useContext } from "react";
 import Cart from "../UI/Cart";
 import NavbarOffcanvas from "../UI/offcanvas/NavbarOffcanvas";
 import { Navbar, Container, FormControl, Form } from "react-bootstrap";
+import SearchContext from "../context/SearchContext";
 
-const Mynavbar = () => {
+const Mynavbar = (props) => {
+  const { searchItemHandler, searchState, dispatchSearch } =
+    useContext(SearchContext);
+  console.log(searchState);
+  const searchWord = useRef();
+  const onSearchHandler = (e) => {
+    e.preventDefault();
+    const enteredSearchWord = searchWord.current.value;
+    const lowerCaseSearchItem = enteredSearchWord.trim().toLowerCase();
+    const captialSearchItem =
+      lowerCaseSearchItem[0].toUpperCase() + lowerCaseSearchItem.slice(1);
+    searchItemHandler(captialSearchItem);
+  };
+
+  // dispatchSearch({
+  //   type: "SHOWMODAL",
+  //   show: true,
+  // });
   return (
     <Fragment>
       <Navbar bg="dark" expand={false} className="p-3">
@@ -12,12 +30,14 @@ const Mynavbar = () => {
             Din Mat
           </Navbar.Brand>
 
-          <Form className="d-flex w-50 ">
+          <Form className="d-flex w-50 " onSubmit={onSearchHandler}>
             <FormControl
+              // value={searchState.item}
               type="search"
               placeholder="Search"
               className="me-2 d-none d-lg-block"
               aria-label="Search"
+              ref={searchWord}
             ></FormControl>
 
             <button

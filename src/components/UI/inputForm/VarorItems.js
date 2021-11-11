@@ -1,8 +1,8 @@
 import { Tooltip, OverlayTrigger } from "react-bootstrap";
 import InputForm from "./InputForm";
-import Popularadata from "../../data/PopularaData";
 import { useContext } from "react";
 import VarorCartContext from "../../context/VarorCartContext";
+import AddAndSubtract from "./AddAndSubtract";
 
 const VarorItems = (props) => {
   const { varorState } = useContext(VarorCartContext);
@@ -26,7 +26,7 @@ const VarorItems = (props) => {
               </div>
             </div>
 
-            <InputForm productId={el.id} />
+            <AddAndSubtract productId={el.id} productAmount={el.amount} />
           </div>
         </li>
       ))}
@@ -37,10 +37,10 @@ const VarorItems = (props) => {
     <div className="p-2">
       {varorItem}
       <div className="border-bottom">
-        <div className="d-flex justify-content-between fs-6 fw-bolder mb-2">
+        {/* <div className="d-flex justify-content-between fs-6 fw-bolder mb-2">
           <span>Varor</span>
-          <span>65.35kr</span>
-        </div>
+          <span>65kr</span>
+        </div> */}
         <div className="d-flex justify-content-between fs-6 fw-bolder mb-2">
           <div>
             <span>Expenditionavgift</span>
@@ -52,17 +52,26 @@ const VarorItems = (props) => {
               <i class="bi bi-info-circle fs-6 ms-1" />
             </OverlayTrigger>
           </div>
-          <span>99kr</span>
+          <span>
+            {varorState.totalAmount < 500 ? 99 : 0} {" kr"}
+          </span>
         </div>
       </div>
 
       <div className="d-flex justify-content-between fs-4 fw-bolder mt-3">
         <span>Totalt</span>
-        <span>156.95kr</span>
+        <span>
+          {varorState.totalAmount < 500 && varorState.totalAmount > 1
+            ? varorState.totalAmount + 99
+            : varorState.totalAmount}
+          {" kr"}
+        </span>
       </div>
       <div className="d-flex justify-content-between fw-bolder text-secondary mb-5">
         <span>Varav moms</span>
-        <span>16.81kr</span>
+        <span>
+          {varorState.totalAmount * 0.25} {" kr"}
+        </span>
       </div>
       <button className="btn btn-danger rounded-pill w-100">Till Kassa</button>
     </div>

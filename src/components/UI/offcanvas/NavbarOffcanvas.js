@@ -6,6 +6,7 @@ const NavbarOffcanvas = () => {
       id="offcanvasNavbar"
       aria-labelledby="offcanvasNavbarLabel"
       placement="end"
+      style={{ backgroundColor: "#f0e5de" }}
     >
       <Offcanvas.Header closeButton>
         <Offcanvas.Title id="offcanvasNavbarLabel"></Offcanvas.Title>

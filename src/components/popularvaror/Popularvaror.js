@@ -38,7 +38,7 @@ const Popularvaror = (props) => {
               <Card.Title>{el.title}</Card.Title>
               <Card.Text>{el.text}</Card.Text>
               <Card.Text>{el.pris}</Card.Text>
-              <InputForm />
+              <InputForm productId={el.id} />
             </Card.Body>
           </Card>
         ))}

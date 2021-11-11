@@ -30,7 +30,7 @@ const FavoritItems = () => {
               {/* <i class="bi bi-dash-square-fill me-2"></i>
               {0}
               <i class="bi bi-plus-square-fill ms-2"></i>*/}
-              <InputForm />
+              <InputForm productId={el.id} productAmount={el.amount} />
             </div>
 
             <div className="me-3">

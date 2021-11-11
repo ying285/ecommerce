@@ -26,7 +26,6 @@ const Popularadata = [
     title: "Banana",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: banana,
   },
 
@@ -35,7 +34,6 @@ const Popularadata = [
     title: "Broccoli",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: broccoli,
   },
 
@@ -44,7 +42,6 @@ const Popularadata = [
     title: "Coca",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: coca,
   },
 
@@ -53,7 +50,6 @@ const Popularadata = [
     title: "Koffee",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: coffee,
   },
 
@@ -62,7 +58,6 @@ const Popularadata = [
     title: "Gurka",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: gurka,
   },
 
@@ -71,7 +66,6 @@ const Popularadata = [
     title: "Hushållspapper",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: hushallspapper,
   },
 
@@ -80,7 +74,6 @@ const Popularadata = [
     title: "Ingenfära",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: ingenfara,
   },
 
@@ -89,7 +82,6 @@ const Popularadata = [
     title: "Kycklingfile",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: kycklingfile,
   },
 
@@ -98,7 +90,6 @@ const Popularadata = [
     title: "Laxfile",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: laxfile,
   },
   {
@@ -106,7 +97,6 @@ const Popularadata = [
     title: "Loka",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: loka,
   },
 
@@ -115,7 +105,6 @@ const Popularadata = [
     title: "Marabou",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: marabou,
   },
 
@@ -124,7 +113,6 @@ const Popularadata = [
     title: "Mjölk",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: mjolk,
   },
 
@@ -133,7 +121,6 @@ const Popularadata = [
     title: "Morot",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: morot,
   },
 
@@ -142,7 +129,6 @@ const Popularadata = [
     title: "Nöfars",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: notfars,
   },
   {
@@ -150,7 +136,6 @@ const Popularadata = [
     title: "Ost",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: ost,
   },
 
@@ -159,7 +144,6 @@ const Popularadata = [
     title: "Pizza",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: pizza,
   },
 
@@ -168,7 +152,6 @@ const Popularadata = [
     title: "Purjolök",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: purjolok,
   },
 
@@ -177,7 +160,6 @@ const Popularadata = [
     title: "Redbull",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: redbull,
   },
 
@@ -186,7 +168,6 @@ const Popularadata = [
     title: "Sallat",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: sallat,
   },
   {
@@ -194,7 +175,6 @@ const Popularadata = [
     title: "Smör",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: smor,
   },
 
@@ -203,7 +183,6 @@ const Popularadata = [
     title: "Tomat",
     text: "Benfria filéer av MSC-certifierad torsk (Gadus morhua)",
     pris: "50kr",
-    isFavorite: false,
     img: tomat,
   },
 ];

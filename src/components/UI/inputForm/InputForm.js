@@ -1,10 +1,8 @@
-import { useRef } from "react";
 import Input from "./Input";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import VarorCartContext from "../../context/VarorCartContext";
 
 const InputForm = (props) => {
-  // const { addVarorItemHandler } = useContext(VarorCartContext);
   const { dispatchVaror } = useContext(VarorCartContext);
   const amountInputRef = useRef();
 
@@ -20,6 +18,8 @@ const InputForm = (props) => {
     ) {
       return;
     }
+
+    console.log(enteredAmountNumber);
     dispatchVaror({
       type: "ADD",
       productId: props.productId,
@@ -30,14 +30,16 @@ const InputForm = (props) => {
   return (
     <form className="d-flex justify-content-between" onSubmit={submitHandler}>
       <Input
+        submitHandler={submitHandler}
         ref={amountInputRef}
         input={{
           type: "number",
           min: "1",
           max: "10",
           step: "1",
-          defaultValue: "1",
+          defaultValue: props.productAmount ? props.productAmount : "1",
         }}
+        productId={props.productId}
       />
     </form>
   );
