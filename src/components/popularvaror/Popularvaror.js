@@ -10,7 +10,7 @@ const Popularvaror = (props) => {
   return (
     <div className="my-5">
       <h2>Populära varor</h2>
-      <div className="d-flex flex-wrap mt-5 ms-5">
+      <div className="d-flex flex-wrap mt-5 ms-4">
         {Popularadata.map((el) => (
           <Card
             key={el.id}
