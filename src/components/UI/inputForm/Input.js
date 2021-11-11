@@ -13,7 +13,7 @@ const Input = React.forwardRef((props, ref) => {
           let amount = getVaraAmount(props.productId);
           const totalAmount = amount - parseInt(ref.current.value);
           dispatchVaror({
-            type: "SEARCH",
+            type: "REMOVE",
             productId: props.productId,
             amount: totalAmount,
           });

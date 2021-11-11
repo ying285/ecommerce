@@ -4,9 +4,12 @@ import PopularaData from "../data/PopularaData";
 import PopularaOverlayData from "../data/PopularaOverlayData";
 import ExtraPrisData from "../data/ExtraPrisData";
 import ExtraPrisOverlayData from "../data/ExtraPrisOverlayData";
+import Popularadata from "../data/PopularaData";
 const defaultFavoritState = {
   items: [],
 };
+
+const allOverlayVaror = PopularaOverlayData.concat(ExtraPrisOverlayData);
 
 const favoritReducer = (state, action) => {
   if (action.type === "HEART") {
@@ -15,7 +18,7 @@ const favoritReducer = (state, action) => {
     return { ...state, items: changedItems };
   } else if (action.type === "HEART_MODAL") {
     const changedItems = [...state.items];
-    changedItems.push(PopularaOverlayData.find((el) => el.id === action.id));
+    changedItems.push(allOverlayVaror.find((el) => el.id === action.id));
     return { ...state, items: changedItems };
   } else if (action.type === "HEART_EXTRA") {
     const changedItems = [...state.items];
@@ -23,7 +26,7 @@ const favoritReducer = (state, action) => {
     return { ...state, items: changedItems };
   } else if (action.type === "HEART_EXTRA_MODAL") {
     const changedItems = [...state.items];
-    changedItems.push(ExtraPrisOverlayData.find((el) => el.id === action.id));
+    changedItems.push(allOverlayVaror.find((el) => el.id === action.id));
     return { ...state, items: changedItems };
   } else if (
     action.type === "NO_HEART_EXTRA" ||

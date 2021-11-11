@@ -12,7 +12,7 @@ import FickModal from "./components/UI/modal/FickModal";
 import HalloweenModal from "./components/UI/modal/HalloweenModal";
 import ExtraPrisOverlayData from "./components/data/ExtraPrisOverlayData";
 import PopularaOverlayData from "./components/data/PopularaOverlayData";
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import FavoritProvider from "./components/context/FavoritProvider";
 import VarorProvider from "./components/context/VarorProvider";
 import SearchProvider from "./components/context/SearchProvider";

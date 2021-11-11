@@ -7,7 +7,7 @@ import SearchContext from "../context/SearchContext";
 const Mynavbar = (props) => {
   const { searchItemHandler, searchState, dispatchSearch } =
     useContext(SearchContext);
-  console.log(searchState);
+
   const searchWord = useRef();
   const onSearchHandler = (e) => {
     e.preventDefault();
@@ -43,6 +43,9 @@ const Mynavbar = (props) => {
             <button
               class="btn  btn-outline-light d-none d-lg-block "
               type="submit"
+              onClick={() => {
+                dispatchSearch({ type: "SHOWMODAL", show: true });
+              }}
             >
               Search
             </button>
