@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 import ExtraPrisData from "../data/ExtraPrisData";
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import React, { useContext } from "react";
 import FavoritCartContext from "../context/FavoritCartContext";
 import InputForm from "../UI/inputForm/InputForm";
@@ -66,7 +66,7 @@ const Extrapris = (props) => {
                   <Card.Title>{el.title}</Card.Title>
                   <Card.Text>{el.text}</Card.Text>
                   <Card.Text>{el.pris}</Card.Text>
-                  <InputForm />
+                  <InputForm productId={el.id} />
                 </Card.Body>
               </Card>
             </SwiperSlide>

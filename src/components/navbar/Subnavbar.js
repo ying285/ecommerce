@@ -6,7 +6,7 @@ const Subnavbar = () => {
   return (
     <Navbar
       expand="lg"
-      className="d-none d-lg-block "
+      className="d-none d-lg-block"
       style={{ backgroundColor: "#f0e5de" }}
     >
       <Container>

@@ -2,12 +2,9 @@ import VarorCartContext from "../../context/VarorCartContext";
 import { useContext } from "react";
 
 const VarorAmount = () => {
-  //   const { varorState } = useContext(VarorCartContext);
-  //   const numberOfCartItems = varorState.items.reduce((cur, el) => {
-  //     return cur + el.amount;
-  //   }, 0);
+  const { varorState } = useContext(VarorCartContext);
 
-  return <div>0</div>;
+  return <div>{varorState.numberOfItems}</div>;
 };
 
 export default VarorAmount;

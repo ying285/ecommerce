@@ -20,7 +20,7 @@ const Login = () => {
           onClick={() => kundLoginOpenModal()}
         ></i>
       </a>
-      <span style={{ fontSize: ".8rem" }}>Login</span>
+      <span style={{ fontSize: ".9rem" }}>Login</span>
       <KundLogin loginShow={loginModal} loginClose={kundLoginCloseModal} />
     </div>
   );

@@ -13,8 +13,8 @@ const FavoritAmount = (props) => {
       ></i>
       {/* <span style={{ fontSize: ".8rem" }}>Favoriter</span> */}
       <span
-        className="bg-secondary rounded-pill badge ms-1"
-        style={{ fontSize: ".8rem" }}
+        className="bg-secondary rounded-pill badge"
+        style={{ fontSize: ".6rem" }}
       >
         {favoritState.items.length}
       </span>

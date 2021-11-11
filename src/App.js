@@ -15,6 +15,9 @@ import PopularaOverlayData from "./components/data/PopularaOverlayData";
 import React, { useState } from "react";
 import FavoritProvider from "./components/context/FavoritProvider";
 import VarorProvider from "./components/context/VarorProvider";
+import SearchProvider from "./components/context/SearchProvider";
+import SearchModal from "./components/UI/modal/SearchModal";
+import SearchContext from "./components/context/SearchContext";
 
 const App = (props) => {
   const [showModal, setShowModal] = useState(false);
@@ -68,41 +71,44 @@ const App = (props) => {
   };
 
   return (
-    <VarorProvider>
-      <FavoritProvider>
-        <div className="p-0 m-0 bg-light">
-          <div className="fixed-top">
-            <Mynavbar />
+    <SearchProvider>
+      <VarorProvider>
+        <FavoritProvider>
+          <div className="p-0 m-0 bg-light">
+            <div className="fixed-top">
+              <Mynavbar />
 
-            <Subnavbar />
+              <Subnavbar />
+            </div>
+            <div style={{ height: "6rem" }}></div>
+            <Header />
+            <Extrapris showModal={handleShowModal} />
+            <Advertisement
+              onLasamer={fickOpenModal}
+              onLasamerHalloween={halloweenOpenModal}
+            />
+            <Popularvaror showPopularaModal={onShowPopularaModal} />
+            <Footer />
+            <ExtraPrisModal
+              show={showModal}
+              data={currentExtraPris}
+              closeModal={handleCloseModal}
+            />
+            <PopularaModal
+              showPopulara={showPopularaModal}
+              dataPopulara={currentPopularaPris}
+              closePopularaModal={onClosePopularaModal}
+            />
+            <FickModal showFick={myFickModal} closeFick={fickCloseModal} />
+            <HalloweenModal
+              showHalloween={myHalloweenModal}
+              closeHalloween={halloweenCloseModal}
+            />
+            {/* <SearchModal /> */}
           </div>
-          <div style={{ height: "6rem" }}></div>
-          <Header />
-          <Extrapris showModal={handleShowModal} />
-          <Advertisement
-            onLasamer={fickOpenModal}
-            onLasamerHalloween={halloweenOpenModal}
-          />
-          <Popularvaror showPopularaModal={onShowPopularaModal} />
-          <Footer />
-          <ExtraPrisModal
-            show={showModal}
-            data={currentExtraPris}
-            closeModal={handleCloseModal}
-          />
-          <PopularaModal
-            showPopulara={showPopularaModal}
-            dataPopulara={currentPopularaPris}
-            closePopularaModal={onClosePopularaModal}
-          />
-          <FickModal showFick={myFickModal} closeFick={fickCloseModal} />
-          <HalloweenModal
-            showHalloween={myHalloweenModal}
-            closeHalloween={halloweenCloseModal}
-          />
-        </div>
-      </FavoritProvider>
-    </VarorProvider>
+        </FavoritProvider>
+      </VarorProvider>
+    </SearchProvider>
   );
 };
 

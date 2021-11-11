@@ -1,35 +1,29 @@
-import React from "react";
 import { useContext } from "react";
 import VarorCartContext from "../../context/VarorCartContext";
 
-const Input = React.forwardRef((props, ref) => {
+const AddAndSubtract = (props) => {
   const { dispatchVaror, getVaraAmount } = useContext(VarorCartContext);
-
   return (
-    <div className="d-flex align-items-center">
+    <div>
       <i
         class="bi bi-dash-square-fill me-2 fs-3 text-secondary"
         onClick={() => {
           let amount = getVaraAmount(props.productId);
-          const totalAmount = amount - parseInt(ref.current.value);
+          const totalAmount = --amount;
           dispatchVaror({
-            type: "SEARCH",
+            type: "REMOVE",
             productId: props.productId,
             amount: totalAmount,
           });
         }}
       />
-      <input
-        {...props.input}
-        className=" form-control shadow-none w-50"
-        ref={ref}
-      />
+      {getVaraAmount(props.productId)}
+
       <i
         class="bi bi-plus-square-fill ms-2 fs-3 text-danger"
         onClick={() => {
-          let amount = parseInt(ref.current.value);
-          console.log(getVaraAmount(props.productId));
-          const totalAmount = amount + getVaraAmount(props.productId);
+          let amount = getVaraAmount(props.productId);
+          const totalAmount = ++amount;
           dispatchVaror({
             type: "ADD",
             productId: props.productId,
@@ -39,6 +33,6 @@ const Input = React.forwardRef((props, ref) => {
       />
     </div>
   );
-});
+};
 
-export default Input;
+export default AddAndSubtract;

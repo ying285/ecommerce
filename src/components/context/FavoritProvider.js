@@ -9,11 +9,7 @@ const defaultFavoritState = {
 };
 
 const favoritReducer = (state, action) => {
-  // add and remove favorit for populara pris data
   if (action.type === "HEART") {
-    // if (state.items.find((item) => item.id === action.id)) {
-    //   return state;
-    // }
     const changedItems = [...state.items];
     changedItems.push(PopularaData.find((el) => el.id === action.id));
     return { ...state, items: changedItems };
@@ -21,14 +17,7 @@ const favoritReducer = (state, action) => {
     const changedItems = [...state.items];
     changedItems.push(PopularaOverlayData.find((el) => el.id === action.id));
     return { ...state, items: changedItems };
-  }
-
-  // else if (action.type === "NO_HEART") {
-  //   const changedItems = state.items.filter((item) => item.id !== action.id);
-  //   return { ...state, items: changedItems };
-  // add and remove favorit for extra pris data
-  // }
-  else if (action.type === "HEART_EXTRA") {
+  } else if (action.type === "HEART_EXTRA") {
     const changedItems = [...state.items];
     changedItems.push(ExtraPrisData.find((el) => el.id === action.id));
     return { ...state, items: changedItems };

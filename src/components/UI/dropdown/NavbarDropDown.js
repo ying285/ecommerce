@@ -12,7 +12,7 @@ const NavbarDropDown = () => {
   const handleShow = () => setShow(true);
 
   return (
-    <Nav className="me-auto postition-relative">
+    <Nav className="me-auto postition-relative d-flex align-items-center">
       <Nav.Link href="#home" className="active ">
         Hem
       </Nav.Link>
