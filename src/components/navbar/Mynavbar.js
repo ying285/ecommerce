@@ -1,8 +1,8 @@
-import React, { Fragment, useRef, useContext } from "react";
-import Cart from "../UI/Cart";
-import NavbarOffcanvas from "../UI/offcanvas/NavbarOffcanvas";
-import { Navbar, Container, FormControl, Form } from "react-bootstrap";
-import SearchContext from "../context/SearchContext";
+import React, { Fragment, useRef, useContext } from 'react';
+import Cart from '../UI/Cart';
+import NavbarOffcanvas from '../UI/offcanvas/NavbarOffcanvas';
+import { Navbar, Container, FormControl, Form } from 'react-bootstrap';
+import SearchContext from '../context/SearchContext';
 
 const Mynavbar = (props) => {
   const { searchItemHandler, searchState, dispatchSearch } =
@@ -25,7 +25,7 @@ const Mynavbar = (props) => {
   return (
     <Fragment>
       <Navbar bg="dark" expand={false} className="p-3">
-        <Container fluid style={{ minWidth: "361px" }}>
+        <Container fluid style={{ minWidth: '361px' }}>
           <Navbar.Brand href="#" className="text-white fw-bolder fs-3">
             Din Mat
           </Navbar.Brand>
@@ -43,6 +43,9 @@ const Mynavbar = (props) => {
             <button
               class="btn  btn-outline-light d-none d-lg-block "
               type="submit"
+              onClick={() => {
+                dispatchSearch({ type: 'SHOWMODAL', show: true });
+              }}
             >
               Search
             </button>
