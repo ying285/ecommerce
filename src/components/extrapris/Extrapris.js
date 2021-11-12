@@ -20,7 +20,7 @@ const Extrapris = (props) => {
             style={{ maxWidth: "540px" }}
             key={el.id}
           >
-            <div className="">
+            <div>
               <div style={{ width: "6rem" }}>
                 <img
                   src={el.img}
@@ -32,12 +32,13 @@ const Extrapris = (props) => {
                 <div className="card-body">
                   <h5 className="card-title">{el.title}</h5>
                   <p className="card-text">{el.text}</p>
-                  <p className="card-text bg-danger text-white w-25 text-center fw-bolder rounded">
+                  <p
+                    className="card-text bg-danger text-white text-center fw-bolder rounded p-1"
+                    style={{ width: "8rem" }}
+                  >
                     {el.rabatt}
                   </p>
-                  <p className="card-text">
-                    <small className="text-muted">{el.pris}</small>
-                  </p>
+                  <p className="card-text">{el.pris}</p>
                 </div>
               </div>
             </div>

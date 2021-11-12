@@ -30,9 +30,7 @@ const Popularvaror = (props) => {
                 <div className="card-body">
                   <h5 className="card-title">{el.title}</h5>
                   <p className="card-text">{el.text}</p>
-                  <p className="card-text">
-                    <small className="text-muted">{el.pris}</small>
-                  </p>
+                  <p className="card-text">{el.pris}</p>
                 </div>
               </div>
             </div>
