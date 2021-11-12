@@ -31,6 +31,7 @@ const Popularvaror = (props) => {
                   <h5 className="card-title">{el.title}</h5>
                   <p className="card-text">{el.text}</p>
                   <p className="card-text">{el.pris}</p>
+                  <InputForm productId={el.id} key={el.id} />
                 </div>
               </div>
             </div>

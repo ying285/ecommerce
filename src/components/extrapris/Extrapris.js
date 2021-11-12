@@ -38,7 +38,9 @@ const Extrapris = (props) => {
                   >
                     {el.rabatt}
                   </p>
+
                   <p className="card-text">{el.pris}</p>
+                  <InputForm productId={el.id} key={el.id} />
                 </div>
               </div>
             </div>
