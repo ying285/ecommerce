@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 
 import mat3 from "../../images/img2/mat3.jpg";
-import mat4 from "../../images/img2/mat4.jpg";
+
 import NyKundModal from "../UI/modal/NyKundModal";
 
 const Header = () => {
@@ -34,14 +34,6 @@ const Header = () => {
           >
             Bli kunde nu
           </button>
-          {/* <div>
-            <img
-              src={mat4}
-              alt="image"
-              style={{ width: "15rem" }}
-              className="position-absolute rounded end-0 top-25 d-none d-lg-block"
-            />
-          </div> */}
         </div>
       </div>
       <NyKundModal nyKundShow={nyKundModal} nyKundClose={nyKundCloseModal} />

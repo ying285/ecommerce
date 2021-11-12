@@ -10,17 +10,17 @@ const Subfooter = () => {
             <h5>Handla</h5>
           </li>
           <li className="mb-4">
-            <a href="#" className="text-decoration-none text-dark">
+            <a href="/#" className="text-decoration-none text-dark">
               Vanliga frågor och svar
             </a>
           </li>
           <li className="mb-4">
-            <a href="#" className="text-decoration-none text-dark">
+            <a href="/#" className="text-decoration-none text-dark">
               Så handlar du
             </a>
           </li>
           <li className="mb-4">
-            <a href="#" className="text-decoration-none text-dark">
+            <a href="/#" className="text-decoration-none text-dark">
               Leveranstider
             </a>
           </li>
@@ -33,22 +33,22 @@ const Subfooter = () => {
             <h5>Din mat</h5>
           </li>
           <li className="mb-4">
-            <a href="#" className="text-decoration-none text-dark">
+            <a href="/#" className="text-decoration-none text-dark">
               Om Din mat
             </a>
           </li>
           <li className="mb-4">
-            <a href="#" className="text-decoration-none text-dark">
+            <a href="/#" className="text-decoration-none text-dark">
               Karriär
             </a>
           </li>
           <li className="mb-4">
-            <a href="#" className="text-decoration-none text-dark">
+            <a href="/#" className="text-decoration-none text-dark">
               Press
             </a>
           </li>
           <li className="mb-4">
-            <a href="#" className="text-decoration-none text-dark">
+            <a href="/#" className="text-decoration-none text-dark">
               Villkor och policyer
             </a>
           </li>
@@ -61,22 +61,22 @@ const Subfooter = () => {
             <h5>Kontakta oss</h5>
           </li>
           <li className="mb-4">
-            <a href="#" className="text-decoration-none text-dark">
+            <a href="/#" className="text-decoration-none text-dark">
               Kundtjänst
             </a>
           </li>
           <li className="mb-4">
-            <a href="#" className="text-decoration-none text-dark">
+            <a href="/#" className="text-decoration-none text-dark">
               <i className="bi bi-facebook"></i> Facebook
             </a>
           </li>
           <li className="mb-4">
-            <a href="#" className="text-decoration-none text-dark">
+            <a href="/#" className="text-decoration-none text-dark">
               <i className="bi bi-instagram"></i> Instagram
             </a>
           </li>
           <li className="mb-4">
-            <a href="#" className="text-decoration-none text-dark">
+            <a href="/#" className="text-decoration-none text-dark">
               <i className="bi bi-twitter"></i> Twitter
             </a>
           </li>

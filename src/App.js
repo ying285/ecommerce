@@ -119,7 +119,7 @@ const App = (props) => {
               buttonText="Ok, Jag acceptterar cookies"
             >
               Vi använder cookies för att ge dig bästa möjliga kundupplevelse.
-              Läsa mer? Klick <a href="#">här</a>
+              Läsa mer? Klick <a href="/#">här</a>
             </CookieConsent>
           </div>
         </FavoritProvider>

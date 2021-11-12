@@ -14,7 +14,7 @@ const Login = (props) => {
 
   return (
     <div className="d-flex align-items-center me-3">
-      <a href="#" className="text-decoration-none ms-3 me-1 fs-4 text-dark">
+      <a href="/#" className="text-decoration-none ms-3 me-1 fs-4 text-dark">
         <i
           className="bi bi-box-arrow-in-right fs-2 me-1"
           onClick={() => kundLoginOpenModal()}

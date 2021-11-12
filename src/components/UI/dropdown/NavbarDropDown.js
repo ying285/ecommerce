@@ -18,37 +18,37 @@ const NavbarDropDown = (props) => {
 
       <NavDropdown title="Kategorier" id="basic-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">
-          <a href="#" className="text-decoration-none text-dark">
+          <a href="/#" className="text-decoration-none text-dark">
             Frukt & grönt
           </a>
         </NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">
-          <a href="#" className="text-decoration-none text-dark">
+          <a href="/#" className="text-decoration-none text-dark">
             Mejeri & Ost
           </a>
         </NavDropdown.Item>
         <NavDropdown.Item href="#action/3.3">
-          <a href="#" className="text-decoration-none text-dark">
+          <a href="/#" className="text-decoration-none text-dark">
             Bröd & bageri
           </a>
         </NavDropdown.Item>
         <NavDropdown.Item href="#action/3.4">
-          <a href="#" className="text-decoration-none text-dark">
+          <a href="/#" className="text-decoration-none text-dark">
             Kött & Chark
           </a>
         </NavDropdown.Item>
         <NavDropdown.Item href="#action/3.5">
-          <a href="#" className="text-decoration-none text-dark">
+          <a href="/#" className="text-decoration-none text-dark">
             Dryck
           </a>
         </NavDropdown.Item>
         <NavDropdown.Item href="#action/3.6">
-          <a href="#" className="text-decoration-none text-dark">
+          <a href="/#" className="text-decoration-none text-dark">
             Fisk & Skaldjur
           </a>
         </NavDropdown.Item>
         <NavDropdown.Item href="#action/3.4">
-          <a href="#" className="text-decoration-none text-dark">
+          <a href="/#" className="text-decoration-none text-dark">
             Hem & Hushåll
           </a>
         </NavDropdown.Item>
@@ -56,12 +56,12 @@ const NavbarDropDown = (props) => {
 
       <NavDropdown title="Erbjudanden" id="basic-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">
-          <a href="#" className="text-decoration-none text-dark">
+          <a href="/#" className="text-decoration-none text-dark">
             Extrapriser
           </a>
         </NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">
-          <a href="#" className="text-decoration-none text-dark">
+          <a href="/#" className="text-decoration-none text-dark">
             Ny kund? 150kr rabbat
           </a>
         </NavDropdown.Item>

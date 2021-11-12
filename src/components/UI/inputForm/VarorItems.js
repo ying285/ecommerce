@@ -1,5 +1,5 @@
 import { Tooltip, OverlayTrigger } from "react-bootstrap";
-import InputForm from "./InputForm";
+
 import { useContext } from "react";
 import VarorCartContext from "../../context/VarorCartContext";
 import AddAndSubtract from "./AddAndSubtract";
