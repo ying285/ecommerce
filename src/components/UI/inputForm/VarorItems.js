@@ -16,7 +16,7 @@ const VarorItems = (props) => {
   const varorItem = (
     <ul className="list-unstyled">
       {varorState.items.map((el) => (
-        <li className="  border-bottom p-2">
+        <li className="  border-bottom p-2" key={el.id}>
           <div className="d-flex justify-content-between">
             <div className="d-flex align-items-center">
               <img src={el.img} alt="img" style={{ width: "4rem" }} />
@@ -49,7 +49,7 @@ const VarorItems = (props) => {
               delay={{ show: 250, hide: 400 }}
               overlay={renderTooltip}
             >
-              <i class="bi bi-info-circle fs-6 ms-1" />
+              <i className="bi bi-info-circle fs-6 ms-1" />
             </OverlayTrigger>
           </div>
           <span>

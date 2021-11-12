@@ -30,7 +30,7 @@ const SearchModal = () => {
               {searchState.item.rabatt}
             </p>
             <i
-              class={`bi ${
+              className={`bi ${
                 isFavorite(searchState.item.id) ? "bi-heart-fill" : "bi-heart"
               } 
               } text-end fs-3 p-3 text-success position-absolute end-0`}

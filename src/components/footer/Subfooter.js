@@ -67,17 +67,17 @@ const Subfooter = () => {
           </li>
           <li className="mb-4">
             <a href="#" className="text-decoration-none text-dark">
-              <i class="bi bi-facebook"></i> Facebook
+              <i className="bi bi-facebook"></i> Facebook
             </a>
           </li>
           <li className="mb-4">
             <a href="#" className="text-decoration-none text-dark">
-              <i class="bi bi-instagram"></i> Instagram
+              <i className="bi bi-instagram"></i> Instagram
             </a>
           </li>
           <li className="mb-4">
             <a href="#" className="text-decoration-none text-dark">
-              <i class="bi bi-twitter"></i> Twitter
+              <i className="bi bi-twitter"></i> Twitter
             </a>
           </li>
         </ul>

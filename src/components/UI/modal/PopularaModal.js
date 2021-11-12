@@ -26,7 +26,7 @@ const PopularModal = (props) => {
               {props.dataPopulara.pris}
             </p>
             <i
-              class={`bi ${
+              className={`bi ${
                 isFavorite(props.dataPopulara.id) ? "bi-heart-fill" : "bi-heart"
               }  text-end fs-3 p-3 text-success position-absolute  end-0`}
               style={{ top: "-1rem" }}

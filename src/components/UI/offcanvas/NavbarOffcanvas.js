@@ -1,4 +1,4 @@
-import { Navbar, Nav, NavDropdown, Offcanvas } from "react-bootstrap";
+import { Navbar, Offcanvas } from "react-bootstrap";
 
 const NavbarOffcanvas = () => {
   return (

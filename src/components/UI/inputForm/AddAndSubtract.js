@@ -6,7 +6,7 @@ const AddAndSubtract = (props) => {
   return (
     <div>
       <i
-        class="bi bi-dash-square-fill me-2 fs-3 text-secondary"
+        className="bi bi-dash-square-fill me-2 fs-3 text-secondary"
         onClick={() => {
           let amount = getVaraAmount(props.productId);
           const totalAmount = --amount;
@@ -20,7 +20,7 @@ const AddAndSubtract = (props) => {
       {getVaraAmount(props.productId)}
 
       <i
-        class="bi bi-plus-square-fill ms-2 fs-3 text-danger"
+        className="bi bi-plus-square-fill ms-2 fs-3 text-danger"
         onClick={() => {
           let amount = getVaraAmount(props.productId);
           const totalAmount = ++amount;

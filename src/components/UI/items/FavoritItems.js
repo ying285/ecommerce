@@ -7,11 +7,11 @@ const FavoritItems = () => {
   return (
     <ul className="list-unstyled">
       {favoritState.items.map((el) => (
-        <li className=" border-bottom border-top p-2">
+        <li className=" border-bottom border-top p-2" key={el.id}>
           <div className="d-flex justify-content-between">
             <div className="d-flex">
               <i
-                class="bi bi-dash-circle-fill text-danger me-3"
+                className="bi bi-dash-circle-fill text-danger me-3"
                 onClick={() => dispatchFavorit({ type: "NO_HEART", id: el.id })}
               ></i>
 

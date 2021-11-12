@@ -27,7 +27,7 @@ const MobilFooter = () => {
         <Login />
         <div className="me-3 d-flex align-items-center ">
           <i
-            class="bi bi-search fs-2 me-1"
+            className="bi bi-search fs-2 me-1"
             onClick={() => searchModalShow()}
           ></i>
           <span style={{ fontSize: ".8rem" }}>Search</span>

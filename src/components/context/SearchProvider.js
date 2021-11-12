@@ -14,10 +14,6 @@ const searchReducer = (state, action) => {
   if (action.type === "SEARCH") {
     const item = allVaror.find((el) => el.title === action.title);
     if (item) {
-      // state.item = item;
-      // console.log(state.item);
-
-      // return state;ispatch
       return { ...state, item };
     } else {
       return { ...state, item: null };

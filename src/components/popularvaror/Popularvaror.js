@@ -18,7 +18,8 @@ const Popularvaror = (props) => {
             className="me-3 mt-3 shadow"
           >
             <i
-              class={`bi ${
+              key={el.id}
+              className={`bi ${
                 isFavorite(el.id) ? "bi-heart-fill" : "bi-heart"
               } text-end p-3 fs-3 text-success`}
               onClick={() =>
@@ -38,7 +39,7 @@ const Popularvaror = (props) => {
               <Card.Title>{el.title}</Card.Title>
               <Card.Text>{el.text}</Card.Text>
               <Card.Text>{el.pris}</Card.Text>
-              <InputForm productId={el.id} />
+              <InputForm productId={el.id} key={el.id} />
             </Card.Body>
           </Card>
         ))}

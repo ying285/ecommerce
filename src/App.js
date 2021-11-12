@@ -19,6 +19,7 @@ import SearchProvider from "./components/context/SearchProvider";
 import SearchModal from "./components/UI/modal/SearchModal";
 import socialMediaAuth from "./components/UI/login/auth";
 import "./components/UI/login/firebase-config";
+import CookieConsent from "react-cookie-consent";
 
 const App = (props) => {
   const [showModal, setShowModal] = useState(false);
@@ -113,6 +114,13 @@ const App = (props) => {
               closeHalloween={halloweenCloseModal}
             />
             <SearchModal />
+            <CookieConsent
+              debug={true}
+              buttonText="Ok, Jag acceptterar cookies"
+            >
+              Vi använder cookies för att ge dig bästa möjliga kundupplevelse.
+              Läsa mer? Klick <a href="#">här</a>
+            </CookieConsent>
           </div>
         </FavoritProvider>
       </VarorProvider>

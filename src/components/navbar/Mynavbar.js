@@ -5,8 +5,7 @@ import { Navbar, Container, FormControl, Form } from "react-bootstrap";
 import SearchContext from "../context/SearchContext";
 
 const Mynavbar = (props) => {
-  const { searchItemHandler, searchState, dispatchSearch } =
-    useContext(SearchContext);
+  const { searchItemHandler, dispatchSearch } = useContext(SearchContext);
 
   const searchWord = useRef();
   const onSearchHandler = (e) => {
@@ -18,10 +17,6 @@ const Mynavbar = (props) => {
     searchItemHandler(captialSearchItem);
   };
 
-  // dispatchSearch({
-  //   type: "SHOWMODAL",
-  //   show: true,
-  // });
   return (
     <Fragment>
       <Navbar bg="dark" expand={false} className="p-3">
@@ -41,7 +36,7 @@ const Mynavbar = (props) => {
             ></FormControl>
 
             <button
-              class="btn  btn-outline-light d-none d-lg-block "
+              className="btn  btn-outline-light d-none d-lg-block "
               type="submit"
               onClick={() => {
                 dispatchSearch({ type: "SHOWMODAL", show: true });

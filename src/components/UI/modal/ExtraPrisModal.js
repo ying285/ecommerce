@@ -19,7 +19,7 @@ const ExtraPrisModal = (props) => {
               {props.data.rabatt}
             </p>
             <i
-              class={`bi ${
+              className={`bi ${
                 isFavorite(props.data.id) ? "bi-heart-fill" : "bi-heart"
               } 
               } text-end fs-3 p-3 text-success position-absolute end-0`}

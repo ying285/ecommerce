@@ -33,6 +33,7 @@ const InputForm = (props) => {
         submitHandler={submitHandler}
         ref={amountInputRef}
         input={{
+          key: props.productId,
           type: "number",
           min: "1",
           max: "10",

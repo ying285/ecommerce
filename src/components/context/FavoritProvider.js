@@ -4,7 +4,7 @@ import PopularaData from "../data/PopularaData";
 import PopularaOverlayData from "../data/PopularaOverlayData";
 import ExtraPrisData from "../data/ExtraPrisData";
 import ExtraPrisOverlayData from "../data/ExtraPrisOverlayData";
-import Popularadata from "../data/PopularaData";
+
 const defaultFavoritState = {
   items: [],
 };

@@ -6,7 +6,7 @@ const FavoritAmount = (props) => {
   return (
     <div className="d-flex align-items-center">
       <i
-        class={`bi ${
+        className={`bi ${
           favoritState.items.length > 0 ? "bi-heart-fill" : "bi-heart"
         }  fs-4 me-1 text-success`}
         onClick={() => props.publicHandleShow()}

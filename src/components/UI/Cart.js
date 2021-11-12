@@ -19,7 +19,7 @@ const Cart = () => {
           onClick={() => handleCartShow()}
           style={{ width: "9rem" }}
         >
-          <i class="bi bi-cart3 me-2"></i>
+          <i className="bi bi-cart3 me-2"></i>
           Varukorg
           <span
             className="

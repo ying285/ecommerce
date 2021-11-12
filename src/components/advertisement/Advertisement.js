@@ -23,7 +23,7 @@ const Advertisement = (props) => {
               </p>
               <button
                 type="button"
-                class="btn btn-light"
+                className="btn btn-light"
                 onClick={() => props.onLasamer()}
               >
                 Läsa mer
@@ -56,7 +56,7 @@ const Advertisement = (props) => {
               </p>
               <button
                 type="button"
-                class="btn btn-light"
+                className="btn btn-light"
                 onClick={() => props.onLasamerHalloween()}
               >
                 Läsa mer

@@ -33,7 +33,7 @@ const SearchMobilModal = (props) => {
             ref={searchWord}
           ></FormControl>
           <button
-            class="btn  btn-outline-dark "
+            className="btn  btn-outline-dark "
             type="submit"
             onClick={() => {
               dispatchSearch({ type: "SHOWMODAL", show: true });
