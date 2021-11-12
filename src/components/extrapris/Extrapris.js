@@ -22,9 +22,8 @@ const Extrapris = (props) => {
       >
         <div className="d-flex">
           {ExtraPrisData.map((el) => (
-            <SwiperSlide>
+            <SwiperSlide key={el.id}>
               <Card
-                key={el.id}
                 style={{ width: "18rem" }}
                 className="me-3 mt-3 shadow"
                 // onClick={() => {
