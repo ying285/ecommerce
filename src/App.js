@@ -114,13 +114,15 @@ const App = (props) => {
               closeHalloween={halloweenCloseModal}
             />
             <SearchModal />
-            <CookieConsent
-              debug={true}
-              buttonText="Ok, Jag acceptterar cookies"
-            >
-              Vi använder cookies för att ge dig bästa möjliga kundupplevelse.
-              Läsa mer? Klick <a href="/#">här</a>
-            </CookieConsent>
+            <div className="d-none d-sm-block">
+              <CookieConsent
+                debug={true}
+                buttonText="Ok, Jag acceptterar cookies"
+              >
+                Vi använder cookies för att ge dig bästa möjliga kundupplevelse.
+                Läsa mer? Klick <a href="/#">här</a>
+              </CookieConsent>
+            </div>
           </div>
         </FavoritProvider>
       </VarorProvider>
