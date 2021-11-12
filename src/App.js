@@ -82,7 +82,7 @@ const App = (props) => {
     <SearchProvider>
       <VarorProvider>
         <FavoritProvider>
-          <div className="p-0 m-0 bg-light" style={{ maxWidth: "1300px" }}>
+          <div className="p-0 m-0 bg-light" style={{ maxWidth: "1400px" }}>
             <div className="fixed-top">
               <Mynavbar />
 

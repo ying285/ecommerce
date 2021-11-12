@@ -4,7 +4,7 @@ import { useContext } from "react";
 import VarorCartContext from "../../context/VarorCartContext";
 import AddAndSubtract from "./AddAndSubtract";
 
-const VarorItems = (props) => {
+const VarorItems = () => {
   const { varorState } = useContext(VarorCartContext);
 
   const renderTooltip = (props) => (
@@ -37,10 +37,6 @@ const VarorItems = (props) => {
     <div className="p-2">
       {varorItem}
       <div className="border-bottom">
-        {/* <div className="d-flex justify-content-between fs-6 fw-bolder mb-2">
-          <span>Varor</span>
-          <span>65kr</span>
-        </div> */}
         <div className="d-flex justify-content-between fs-6 fw-bolder mb-2">
           <div>
             <span>Expenditionavgift</span>

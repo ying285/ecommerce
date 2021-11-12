@@ -39,11 +39,8 @@ const KundLogin = (props) => {
         </Form>
       </Modal.Body>
       <Modal.Footer style={{ backgroundColor: "#f0e5de" }}>
-        <div
-          className="position-relative d-flex"
-          style={{ marginRight: "4.5rem" }}
-        >
-          <div className=" " style={{ marginRight: "5rem" }}>
+        <div className="position-relative d-flex mx-auto">
+          <div className="me-3">
             <Button
               onClick={() => {
                 props.loginHandler(facebookProvider);

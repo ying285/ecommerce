@@ -13,7 +13,40 @@ const Extrapris = (props) => {
     <div>
       <h2 className="mb-5">Veckans extrapriser</h2>
 
+      <div className="d-sm-none">
+        {ExtraPrisData.map((el) => (
+          <div
+            className="card mb-3 p-3"
+            style={{ maxWidth: "540px" }}
+            key={el.id}
+          >
+            <div className="">
+              <div style={{ width: "6rem" }}>
+                <img
+                  src={el.img}
+                  className="img-fluid rounded-start"
+                  alt="img"
+                />
+              </div>
+              <div>
+                <div className="card-body">
+                  <h5 className="card-title">{el.title}</h5>
+                  <p className="card-text">{el.text}</p>
+                  <p className="card-text bg-danger text-white w-25 text-center fw-bolder rounded">
+                    {el.rabatt}
+                  </p>
+                  <p className="card-text">
+                    <small className="text-muted">{el.pris}</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
       <Swiper
+        className="d-none d-sm-block"
         spaceBetween={235}
         slidesPerView={5}
         centeredSlides={false}
@@ -54,14 +87,15 @@ const Extrapris = (props) => {
                       : dispatchFavorit({ type: "HEART_EXTRA", id: el.id })
                   }
                 />
-                {/* <i class="bi bi-heart text-end fs-3 p-3 text-secondary" /> */}
-                <Card.Img
-                  variant="top"
-                  src={el.img}
-                  onClick={() => {
-                    props.showModal(el.id);
-                  }}
-                />
+                <div style={{ width: "10rem" }} className="mx-auto">
+                  <Card.Img
+                    variant="top"
+                    src={el.img}
+                    onClick={() => {
+                      props.showModal(el.id);
+                    }}
+                  />
+                </div>
                 <Card.Body>
                   <Card.Title>{el.title}</Card.Title>
                   <Card.Text>{el.text}</Card.Text>

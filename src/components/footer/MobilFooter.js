@@ -1,12 +1,15 @@
 import ShoppingCartMobil from "../UI/modal/ShoppingCartMobil";
 import SearchMobilModal from "../UI/modal/SearchMobilModal";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import FavoritAmount from "../UI/amount/FavoritAmount";
 import FavoritOffcanvas from "../UI/offcanvas/FavoritOffcanvas";
 import Login from "../UI/login/Login";
 import VarorAmount from "../UI/amount/VarorAmount";
+import VarorCartContext from "../context/VarorCartContext";
 
 const MobilFooter = () => {
+  const { varorState } = useContext(VarorCartContext);
+
   const [show, setShow] = useState(false);
   const [searchModal, setSearchModal] = useState(false);
 
@@ -23,7 +26,7 @@ const MobilFooter = () => {
   const searchModalShow = () => setSearchModal(true);
   return (
     <div>
-      <div className="bg-lighten d-lg-none d-flex flex-row justify-content-center align-items-center py-3">
+      <div className=" d-flex flex-row justify-content-center align-items-center py-3">
         <Login />
         <div className="me-3 d-flex align-items-center ">
           <i
@@ -58,7 +61,12 @@ const MobilFooter = () => {
             </i>
           </div>
 
-          <div style={{ fontSize: ".8rem" }}>56.98kr</div>
+          <div style={{ fontSize: ".8rem" }}>
+            {varorState.totalAmount < 500 && varorState.totalAmount > 1
+              ? varorState.totalAmount + 99
+              : varorState.totalAmount}
+            {" kr"}
+          </div>
         </div>
       </div>
       <FavoritOffcanvas show={show} handleClose={handleClose} />

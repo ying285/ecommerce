@@ -8,7 +8,10 @@ const Footer = () => {
     <div>
       <Subfooter />
       <MainFooter />
-      <MobilFooter />
+      <div style={{ height: "3rem" }} className="d-lg-none"></div>
+      <div className="fixed-bottom border-top bg-light d-lg-none">
+        <MobilFooter />
+      </div>
     </div>
   );
 };

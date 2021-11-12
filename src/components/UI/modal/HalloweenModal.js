@@ -8,10 +8,10 @@ const FickModal = (props) => {
         <Modal.Header closeButton style={{ backgroundColor: "#e2eeee" }}>
           <Modal.Title className="fw-bolder">Halloween time</Modal.Title>
         </Modal.Header>
-        <Modal.Body className="p-5" style={{ backgroundColor: "#e2eeee" }}>
+        <Modal.Body className="p-3" style={{ backgroundColor: "#e2eeee" }}>
           <img
             src={halloweentime}
-            style={{ width: "20rem" }}
+            style={{ width: "15rem" }}
             className="ms-4 rounded"
             alt="halloweentime"
           />

@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Button } from "react-bootstrap";
 import ShoppingCartMobil from "../UI/modal/ShoppingCartMobil";
 import VarorAmount from "./amount/VarorAmount";
+import VarorCartContext from "../context/VarorCartContext";
 
 const Cart = () => {
   const [cartShow, setCartShow] = useState(false);
+  const { varorState } = useContext(VarorCartContext);
 
   const handleCartShow = () => {
     setCartShow(true);
@@ -20,7 +22,10 @@ const Cart = () => {
           style={{ width: "9rem" }}
         >
           <i className="bi bi-cart3 me-2"></i>
-          Varukorg
+          {varorState.totalAmount < 500 && varorState.totalAmount > 1
+            ? varorState.totalAmount + 99
+            : varorState.totalAmount}
+          {" kr"}
           <span
             className="
           badge
