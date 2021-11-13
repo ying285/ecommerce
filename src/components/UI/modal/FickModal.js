@@ -13,7 +13,7 @@ const FickModal = (props) => {
             src={fickatid}
             style={{ width: "15rem" }}
             className="ms-4 rounded"
-            alt="halloweentime"
+            alt="fickatid"
           />
           <p className="p-4">
             På arbetet är det vanligt att man har en gemensam "fika"-paus på
