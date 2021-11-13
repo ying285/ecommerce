@@ -18,13 +18,28 @@ const Popularvaror = (props) => {
             style={{ maxWidth: "540px" }}
             key={el.id}
           >
-            <div className="">
-              <div style={{ width: "6rem" }}>
-                <img
-                  src={el.img}
-                  className="img-fluid rounded-start"
-                  alt="img"
-                />
+            <div>
+              <div className="d-flex">
+                <div style={{ width: "6rem" }}>
+                  <img
+                    src={el.img}
+                    className="img-fluid rounded-start"
+                    alt="img"
+                  />
+                </div>
+                <div>
+                  <i
+                    key={el.id}
+                    className={`bi ${
+                      isFavorite(el.id) ? "bi-heart-fill" : "bi-heart"
+                    } text-end p-3 fs-3 text-success`}
+                    onClick={() =>
+                      isFavorite(el.id)
+                        ? dispatchFavorit({ type: "NO_HEART", id: el.id })
+                        : dispatchFavorit({ type: "HEART", id: el.id })
+                    }
+                  />
+                </div>
               </div>
               <div>
                 <div className="card-body">
