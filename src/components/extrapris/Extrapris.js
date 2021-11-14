@@ -13,11 +13,11 @@ const Extrapris = (props) => {
     <div>
       <h2 className="mb-5">Veckans extrapriser</h2>
 
-      <div className="d-sm-none">
+      <div className="d-xl-none">
         {ExtraPrisData.map((el) => (
           <div
             className="card mb-3 p-3"
-            style={{ maxWidth: "540px" }}
+            style={{ maxWidth: "1200px" }}
             key={el.id}
           >
             <div>
@@ -64,7 +64,7 @@ const Extrapris = (props) => {
       </div>
 
       <Swiper
-        className="d-none d-sm-block"
+        className="d-none d-xl-block"
         spaceBetween={235}
         slidesPerView={5}
         centeredSlides={false}

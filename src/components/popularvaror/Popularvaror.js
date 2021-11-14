@@ -11,11 +11,11 @@ const Popularvaror = (props) => {
     <div className="my-5">
       <h2>Populära varor</h2>
 
-      <div className="d-sm-none">
+      <div className="d-xl-none">
         {Popularadata.map((el) => (
           <div
             className="card mb-3 p-3"
-            style={{ maxWidth: "540px" }}
+            style={{ maxWidth: "1200px" }}
             key={el.id}
           >
             <div>
@@ -54,7 +54,7 @@ const Popularvaror = (props) => {
         ))}
       </div>
 
-      <div className="d-none d-sm-block">
+      <div className="d-none d-xl-block">
         <div className="d-flex flex-wrap mt-5 ms-4 ">
           {Popularadata.map((el) => (
             <Card
