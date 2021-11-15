@@ -65,8 +65,8 @@ const Extrapris = (props) => {
 
       <Swiper
         className="d-none d-xl-block ps-2"
-        spaceBetween={45}
-        slidesPerView={4.5}
+        spaceBetween={-10}
+        slidesPerView={"auto"}
         centeredSlides={false}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
