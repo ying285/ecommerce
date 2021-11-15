@@ -8,7 +8,7 @@ const Popularvaror = (props) => {
   const { dispatchFavorit, isFavorite } = useContext(FavoritCartContext);
 
   return (
-    <div className="my-5">
+    <div className="my-5 ps-2">
       <h2>Populära varor</h2>
 
       <div className="d-xl-none">
@@ -54,13 +54,13 @@ const Popularvaror = (props) => {
         ))}
       </div>
 
-      <div className="d-none d-xl-block">
-        <div className="d-flex flex-wrap mt-5 ms-4 ">
+      <div className="d-none d-xl-block ms-4">
+        <div className="populara mt-5  d-flex flex-wrap">
           {Popularadata.map((el) => (
             <Card
               key={el.id}
               style={{ width: "18rem" }}
-              className="me-3 mt-3 shadow"
+              className="me-3 mt-3 shadow px-1 "
             >
               <i
                 key={el.id}

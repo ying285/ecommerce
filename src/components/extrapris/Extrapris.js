@@ -11,7 +11,7 @@ const Extrapris = (props) => {
   const { dispatchFavorit, isFavorite } = useContext(FavoritCartContext);
   return (
     <div>
-      <h2 className="mb-5">Veckans extrapriser</h2>
+      <h2 className="mb-5 p-2">Veckans extrapriser</h2>
 
       <div className="d-xl-none">
         {ExtraPrisData.map((el) => (
@@ -64,8 +64,8 @@ const Extrapris = (props) => {
       </div>
 
       <Swiper
-        className="d-none d-xl-block"
-        spaceBetween={235}
+        className="d-none d-xl-block ps-2"
+        spaceBetween={230}
         slidesPerView={5}
         centeredSlides={false}
         onSlideChange={() => console.log("slide change")}

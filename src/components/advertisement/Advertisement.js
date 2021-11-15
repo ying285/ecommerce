@@ -3,7 +3,10 @@ import halloween from "../../images/img2/halloween.jpg";
 
 const Advertisement = (props) => {
   return (
-    <div className="d-flex mt-5 justify-content-evenly row">
+    <div
+      className="d-flex justify-content-evenly row"
+      style={{ marginTop: "6rem" }}
+    >
       <div
         className="card mb-3"
         style={{ maxWidth: "30rem", backgroundColor: "#fff9ec" }}
