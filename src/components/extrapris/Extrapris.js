@@ -65,8 +65,8 @@ const Extrapris = (props) => {
 
       <Swiper
         className="d-none d-xl-block ps-2"
-        spaceBetween={230}
-        slidesPerView={5}
+        spaceBetween={45}
+        slidesPerView={4.5}
         centeredSlides={false}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
@@ -75,7 +75,7 @@ const Extrapris = (props) => {
           {ExtraPrisData.map((el) => (
             <SwiperSlide key={el.id}>
               <Card
-                style={{ width: "18.5rem" }}
+                style={{ width: "18rem" }}
                 className="me-3 mt-3 shadow"
                 // onClick={() => {
                 //   props.showModal(el.id);
