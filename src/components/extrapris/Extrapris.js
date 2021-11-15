@@ -75,7 +75,7 @@ const Extrapris = (props) => {
           {ExtraPrisData.map((el) => (
             <SwiperSlide key={el.id}>
               <Card
-                style={{ width: "18rem" }}
+                style={{ width: "18.5rem" }}
                 className="me-3 mt-3 shadow"
                 // onClick={() => {
                 //   props.showModal(el.id);
