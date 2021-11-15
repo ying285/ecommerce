@@ -65,11 +65,42 @@ const Extrapris = (props) => {
 
       <Swiper
         className="d-none d-xl-block ps-2"
-        spaceBetween={-10}
-        slidesPerView={"auto"}
+        spaceBetween={250}
+        slidesPerView={5}
         centeredSlides={false}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
+        breakpoints={{
+          1400: {
+            spaceBetween: 250,
+            slidesPerView: 5.5,
+          },
+
+          1500: {
+            spaceBetween: 250,
+            slidesPerView: 6,
+          },
+
+          1600: {
+            spaceBetween: 250,
+            slidesPerView: 6.5,
+          },
+
+          1700: {
+            spaceBetween: 250,
+            slidesPerView: 6.5,
+          },
+
+          1800: {
+            spaceBetween: 250,
+            slidesPerView: 7,
+          },
+
+          1900: {
+            spaceBetween: 250,
+            slidesPerView: 7,
+          },
+        }}
       >
         <div className="d-flex">
           {ExtraPrisData.map((el) => (
